@@ -117,3 +117,4 @@ This structure ensures a **balanced, efficient workflow** across typing, navigat
 ![photo06](photos/IMG_20250310_193345.jpg)
 ![photo07](photos/IMG_20250310_193424.jpg)
 ![photo08](photos/IMG_20250310_193434.jpg)
+![photo09](photos/IMG_20250705_132208.jpg)
