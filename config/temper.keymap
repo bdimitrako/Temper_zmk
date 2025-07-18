@@ -153,7 +153,7 @@
             bindings = <
   &kp GRAVE         &kp AMPERSAND         &kp STAR               &kp CARET          &kp EQUAL      &kp LEFT_BRACE   &kp RSHFT          &kp RCTRL    &kp LALT      &kp RGUI
   &kp EXCL          &kp AT                &kp HASH               &kp DOLLAR         &kp PERCENT    &kp TAB          &sk RSHFT          &sk RCTRL    &sk LALT      &sk RGUI
-  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp BSLH       &kp RIGHT_BRACE  &kp MINUS          &kp PIPE     &kp RALT      &none
+  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp BSLH       &kp RIGHT_BRACE  &kp MINUS          &kp PIPE     &kp RALT      &kp UNDER
                                           &kp ESC                &kp QUESTION       &kp SLASH      &none            &kp LC(BACKSPACE)  &kp LC(DEL)
             >;
         };
