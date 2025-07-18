@@ -38,20 +38,20 @@ layers:
   - {t: ⌫, h: MSE}
   - {t: ⌦, h: FUN}
   NAV:
-  - {t: Win, h: sticky}
-  - {t: Alt, h: sticky}
-  - {t: Ctrl, h: sticky}
-  - {t: Shift, h: sticky}
+  - Win
+  - Alt
+  - Ctrl
+  - Shift
   - ''
   - Insert
   - Home
   - ↑
   - End
   - Page Up
-  - Win
-  - Alt
-  - Ctrl
-  - Shift
+  - {t: Win, h: sticky}
+  - {t: Alt, h: sticky}
+  - {t: Ctrl, h: sticky}
+  - {t: Shift, h: sticky}
   - ↹
   - Caps Lock
   - ←
@@ -75,20 +75,20 @@ layers:
   - Ctl+⌫
   - Ctl+⌦
   NUM:
-  - {t: Win, h: sticky}
-  - {t: Alt, h: sticky}
-  - {t: Ctrl, h: sticky}
-  - {t: Shift, h: sticky}
+  - Win
+  - Alt
+  - Ctrl
+  - Shift
   - Alt+Sft+↹
   - ➕
   - '7'
   - '8'
   - '9'
   - 🟰
-  - Win
-  - Alt
-  - Ctrl
-  - Shift
+  - {t: Win, h: sticky}
+  - {t: Alt, h: sticky}
+  - {t: Ctrl, h: sticky}
+  - {t: Shift, h: sticky}
   - Calc
   - ➖
   - '4'
@@ -118,27 +118,27 @@ layers:
   - ^
   - '='
   - '{'
-  - '-'
-  - {t: Ctrl, h: sticky}
-  - {t: Alt, h: sticky}
-  - {t: Win, h: sticky}
+  - Shift
+  - Ctrl
+  - Alt
+  - Win
   - '!'
   - '@'
   - '#'
   - $
   - '%'
   - ↹
-  - Shift
-  - Ctrl
-  - Alt
-  - Win
+  - {t: Shift, h: sticky}
+  - {t: Ctrl, h: sticky}
+  - {t: Alt, h: sticky}
+  - {t: Win, h: sticky}
   - '['
   - (
   - )
   - ']'
   - \
   - '}'
-  - _
+  - '-'
   - '|'
   - AltGr
   - ''
@@ -155,20 +155,20 @@ layers:
   - Scroll →
   - Back Click
   - Mini Map
-  - {t: Shift, h: sticky}
-  - {t: Ctrl, h: sticky}
-  - {t: Alt, h: sticky}
-  - {t: Win, h: sticky}
+  - Shift
+  - Ctrl
+  - Alt
+  - Win
   - Scroll ↓
   - Mouse ←
   - Mouse ↓
   - Mouse →
   - Forward Click
   - Snip Img
-  - Shift
-  - Ctrl
-  - Alt
-  - Win
+  - {t: Shift, h: sticky}
+  - {t: Ctrl, h: sticky}
+  - {t: Alt, h: sticky}
+  - {t: Win, h: sticky}
   - Undo
   - Cut
   - Copy
@@ -192,20 +192,20 @@ layers:
   - F9
   - Pause Break
   - ''
-  - {t: Shift, h: sticky}
-  - {t: Ctrl, h: sticky}
-  - {t: Alt, h: sticky}
-  - {t: Win, h: sticky}
+  - Shift
+  - Ctrl
+  - Alt
+  - Win
   - F11
   - F4
   - F5
   - F6
   - Print Screen
   - ''
-  - Shift
-  - Ctrl
-  - Alt
-  - Win
+  - {t: Shift, h: sticky}
+  - {t: Ctrl, h: sticky}
+  - {t: Alt, h: sticky}
+  - {t: Win, h: sticky}
   - F10
   - F1
   - F2
