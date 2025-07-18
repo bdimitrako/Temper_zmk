@@ -131,8 +131,8 @@
         nav {
             display-name = "NAV";
             bindings = <
-  &sk LGUI   &sk LALT      &sk LCTRL  &sk LSHFT       &none        &kp INS        &kp HOME      &kp UP        &kp END    &kp PG_UP
-  &kp LGUI   &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &kp TAB      &kp CAPS       &kp LEFT      &kp DOWN      &kp RIGHT  &kp PG_DN
+  &kp LGUI   &kp LALT      &kp LCTRL  &kp LSHFT       &none        &kp INS        &kp HOME      &kp UP        &kp END    &kp PG_UP
+  &sk LGUI   &sk LALT      &sk LCTRL  &sk LSHFT       &kp TAB      &kp CAPS       &kp LEFT      &kp DOWN      &kp RIGHT  &kp PG_DN
   &kp LC(Z)  &kp LC(X)     &kp LC(C)  &kp LC(V)       &kp LC(Y)    &none          &kp K_APP     &kp LA(SPACE) &none      &none
                            &kp ESC    &kp SPACE       &kp ENTER    &kp LG(SPACE)  &kp LC(BSPC)  &kp LC(DEL)
             >;
@@ -141,8 +141,8 @@
         num {
             display-name = "NUM";
             bindings = <
-  &sk LGUI   &sk LALT       &sk LCTRL         &sk LSHFT      &kp LA(LS(TAB))    &kp KP_PLUS      &kp N7         &kp N8         &kp N9  &kp KP_EQUAL
-  &kp LGUI   &kp LALT       &kp LCTRL         &kp LSHFT      &kp C_AL_CALC      &kp KP_MINUS     &kp N4         &kp N5         &kp N6  &kp N0
+  &kp LGUI   &kp LALT       &kp LCTRL         &kp LSHFT      &kp LA(LS(TAB))    &kp KP_PLUS      &kp N7         &kp N8         &kp N9  &kp KP_EQUAL
+  &sk LGUI   &sk LALT       &sk LCTRL         &sk LSHFT      &kp C_AL_CALC      &kp KP_MINUS     &kp N4         &kp N5         &kp N6  &kp N0
   &kp LG(Z)  &kp LA(EQUAL)  &kp LC(NUMBER_1)  &kp LC(LS(V))  &kp LA(TAB)        &kp KP_MULTIPLY  &kp N1         &kp N2         &kp N3  &kp PRCNT
                             &kp ESC           &kp SPACE      &none              &kp TAB          &kp KP_DIVIDE  &kp BACKSPACE
             >;
@@ -151,9 +151,9 @@
         sym {
             display-name = "SYM";
             bindings = <
-  &kp GRAVE         &kp AMPERSAND         &kp STAR               &kp CARET          &kp EQUAL      &kp LEFT_BRACE   &kp MINUS          &sk RCTRL    &sk LEFT_ALT  &sk RIGHT_GUI
-  &kp EXCL          &kp AT                &kp HASH               &kp DOLLAR         &kp PERCENT    &kp TAB          &kp RSHFT          &kp RCTRL    &kp LALT      &kp RGUI
-  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp BSLH       &kp RIGHT_BRACE  &kp UNDER          &kp PIPE     &kp RALT      &none
+  &kp GRAVE         &kp AMPERSAND         &kp STAR               &kp CARET          &kp EQUAL      &kp LEFT_BRACE   &kp RSHFT          &kp RCTRL    &kp LALT      &kp RGUI
+  &kp EXCL          &kp AT                &kp HASH               &kp DOLLAR         &kp PERCENT    &kp TAB          &sk RSHFT          &sk RCTRL    &sk LALT      &sk RGUI
+  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp BSLH       &kp RIGHT_BRACE  &kp MINUS          &kp PIPE     &kp RALT      &none
                                           &kp ESC                &kp QUESTION       &kp SLASH      &none            &kp LC(BACKSPACE)  &kp LC(DEL)
             >;
         };
@@ -161,8 +161,8 @@
         mouse {
             display-name = "MSE";
             bindings = <
-  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &mkp MB4     &kp LS(LG(D))  &sk RIGHT_SHIFT  &sk RCTRL  &sk LEFT_ALT  &sk RIGHT_GUI
-  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5     &kp LG(LS(S))  &kp RSHFT        &kp RCTRL  &kp LALT      &kp RGUI
+  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &mkp MB4     &kp LS(LG(D))  &kp RSHFT        &kp RCTRL  &kp LALT      &kp RGUI
+  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5     &kp LG(LS(S))  &sk RSHFT        &sk RCTRL  &sk LALT      &sk RGUI
   &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)        &kp LC(Y)    &kp LS(LG(T))  &mo 2            &mo 1      &kp RALT      &none
                                   &mkp MCLK       &mkp LCLK        &mkp RCLK    &kp ENTER      &kp BSPC         &kp DEL
             >;
@@ -171,8 +171,8 @@
         fun {
             display-name = "FUN";
             bindings = <
-  &kp F12  &kp F7  &kp F8     &kp F9       &kp PAUSE_BREAK    &none      &sk RIGHT_SHIFT  &sk RCTRL  &sk LEFT_ALT  &sk RIGHT_GUI
-  &kp F11  &kp F4  &kp F5     &kp F6       &kp PRINTSCREEN    &none      &kp RSHFT        &kp RCTRL  &kp LALT      &kp RGUI
+  &kp F12  &kp F7  &kp F8     &kp F9       &kp PAUSE_BREAK    &none      &kp RSHFT        &kp RCTRL  &kp LALT      &kp RGUI
+  &kp F11  &kp F4  &kp F5     &kp F6       &kp PRINTSCREEN    &none      &sk RSHFT        &sk RCTRL  &sk LALT      &sk RGUI
   &kp F10  &kp F1  &kp F2     &kp F3       &kp SLCK           &none      &none            &none      &kp RALT      &none
                    &kp K_APP  &kp LA(F11)  &kp LA(F12)        &kp ENTER  &kp BSPC         &none
             >;
