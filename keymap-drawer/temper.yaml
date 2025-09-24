@@ -169,11 +169,11 @@ layers:
   - {t: Ctrl, h: sticky}
   - {t: Alt, h: sticky}
   - {t: Win, h: sticky}
-  - Undo
-  - Cut
-  - Copy
-  - Paste
-  - Redo
+  - Ctl+T
+  - Ctl+W
+  - Ctl+R
+  - Ctl+L
+  - Ctl+Sft+T
   - Snip Text
   - NUM
   - NAV
