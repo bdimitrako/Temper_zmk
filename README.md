@@ -78,9 +78,9 @@ The **Symbols layer** includes frequently used programming and punctuation symbo
 - Layout follows a **logical grouping**:  
   - `=`, `&`, `*`, `^`, `'` easy to find pinky finger equal and quick bullets in middle finger.
   - `!`, `@`, `#`, `$`, `%`  following a normal keyboard `1 2 3 4 5` shifted positions.
-  - `[`, `(`, `)`, `]`, `\` the parentesis and brackets are symmetrical as per the middle of the columns.
-  - `?`,`/` by having both thumbs rolling to give slash the character that was original on base Colemak-DH
-- On the right hand side there are braces and dashes in an easy location for single handed typing.  
+  - `[`, `(`, `)`, `]`, `-` the parentesis and brackets are symmetrical as per the middle of the columns.
+  - `\`,`?`,`/` by having both thumbs rolling to give slash the character that was original on base Colemak-DH
+- On the right hand side there are braces and undersoce in an easy location for single handed typing thumb-pinky combo. Moreover there is an easy single handed Win+L to lock windows machines.
 
 ## Navigation Layer  
 - Provides **efficient text and file navigation** without moving hands from the home position.  
@@ -91,8 +91,25 @@ The **Symbols layer** includes frequently used programming and punctuation symbo
 ## Mouse Layer  
 - Designed for **precise control** over cursor movement.  
 - **Left-hand inverted-T movement** mirrors gaming muscle memory.  
+- **Left side browser efficiency shortcuts:**
+- `Ctrl+T`: New tab
+- `Ctrl+W`: Close current tab  
+- `Ctrl+R`: Refresh page
+- `Ctrl+L`: Focus address bar
+- `Ctrl+Shift+T`: Reopen closed tab
 - **Left-hand shortcuts**: Left click, Right click, Middle click, Scroll and extra mouse buttons for browsing.  
-- Mouse toggle to get back to base.  
+- Mouse toggle to get back to base.
+
+**Right side**: Screenshot shortcuts (`Shift+Win+D`, `Win+Shift+S`, `Shift+Win+T`)
+
+### Multi-Speed Mouse Control
+The mouse system leverages ZMK's layering system to provide **three precision levels**:
+
+- **Navigation Layer (1)**: 33% speed - Ultra-precise for detailed work
+- **Numbers Layer (2)**: 50% speed - Moderate precision for general navigation  
+- **Mouse Layer (4)**: 100% speed - Full speed (default) for quick movements
+
+**How it works:** The mouse speed automatically adjusts based on which layer is currently active. This utilizes ZMK's layer system where the `mmv_input_listener` applies different scaling processors depending on the active layer. You don't need to switch layers specifically for mouse control - the speed adapts to whatever layer you're already using.
 
 ## Function Layer  
 - Includes **F1-F12 keys** in a standard layout.  
@@ -118,3 +135,4 @@ This structure ensures a **balanced, efficient workflow** across typing, navigat
 ![photo07](photos/IMG_20250310_193424.jpg)
 ![photo08](photos/IMG_20250310_193434.jpg)
 ![photo09](photos/IMG_20250705_132208.jpg)
+
