@@ -161,10 +161,10 @@
         mouse {
             display-name = "MSE";
             bindings = <
-  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &mkp MB4     &kp LS(LG(D))  &kp RSHFT        &kp RCTRL  &kp LALT      &kp RGUI
-  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5     &kp LG(LS(S))  &sk RSHFT        &sk RCTRL  &sk LALT      &sk RGUI
-  &kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)        &kp LC(Y)    &kp LS(LG(T))  &mo 2            &mo 1      &kp RALT      &none
-                                  &mkp MCLK       &mkp LCLK        &mkp RCLK    &kp ENTER      &kp BSPC         &kp DEL
+  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &mkp MB4         &kp LS(LG(D))  &kp RSHFT        &kp RCTRL  &kp LALT      &kp RGUI
+  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5         &kp LG(LS(S))  &sk RSHFT        &sk RCTRL  &sk LALT      &sk RGUI
+  &kp LC(T)       &kp LC(W)       &kp LC(R)       &kp LC(L)        &kp LC(LS(T))    &kp LS(LG(T))  &mo 2            &mo 1      &kp RALT      &none
+                                  &mkp MCLK       &mkp LCLK        &mkp RCLK        &kp ENTER      &kp BSPC         &kp DEL
             >;
         };
 
