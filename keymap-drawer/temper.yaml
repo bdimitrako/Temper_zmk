@@ -169,16 +169,16 @@ layers:
   - {t: Ctrl, h: sticky}
   - {t: Alt, h: sticky}
   - {t: Win, h: sticky}
-  - Ctl+T
   - Ctl+W
-  - Ctl+R
   - Ctl+L
+  - Ctl+R
+  - Ctl+T
   - Ctl+Sft+T
   - Snip Text
   - NUM
   - NAV
   - AltGr
-  - ''
+  - Win Close
   - Middle Click
   - Left Click
   - Right Click
@@ -215,7 +215,7 @@ layers:
   - ''
   - ''
   - AltGr
-  - ''
+  - Ctl+Sft+Esc
   - APP
   - Alt+F11
   - Alt+F12
