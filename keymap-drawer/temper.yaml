@@ -275,16 +275,40 @@ combos:
 - p: [7, 17]
   k: {t: SYM, h: sticky}
   l: [Base]
-- p: [11, 12, 13]
+- p: [0, 10, 20]
   k: {t: MSE, h: toggle}
   l: [Base, MSE]
   a: top
   o: -1.0
-- p: [17, 18, 16]
+- p: [9, 19, 29]
   k: {t: NAV, h: toggle}
   l: [Base, NAV]
   a: top
   o: -1.0
 - p: [2, 12]
   k: {t: NUM, h: sticky}
+  l: [Base]
+- p: [10, 11]
+  k: \
+  l: [Base]
+- p: [11, 12]
+  k: '['
+  l: [Base]
+- p: [12, 13]
+  k: (
+  l: [Base]
+- p: [13, 14]
+  k: '{'
+  l: [Base]
+- p: [15, 16]
+  k: '}'
+  l: [Base]
+- p: [16, 17]
+  k: )
+  l: [Base]
+- p: [17, 18]
+  k: ']'
+  l: [Base]
+- p: [18, 19]
+  k: /
   l: [Base]
