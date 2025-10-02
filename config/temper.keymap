@@ -98,19 +98,68 @@
 
         togmouse {
             bindings = <&tog 4>;
-            key-positions = <11 12 13>;
+            key-positions = <0 10 20>;
             layers = <0 4>;
         };
 
         tognav {
             bindings = <&tog 1>;
-            key-positions = <17 18 16>;
+            key-positions = <9 19 29>;
             layers = <0 1>;
         };
 
         nextnum {
             bindings = <&sl 2>;
             key-positions = <2 12>;
+            layers = <0>;
+        };
+
+        symLeft01 {
+            bindings = <&kp BSLH>;
+            key-positions = <10 11>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        symLeft02 {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <11 12>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        symLeft03 {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <12 13>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        symLeft04{
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <13 14>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        symRight01 {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <15 16>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        symRight02 {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <16 17>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        symRight03 {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <17 18>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        symRight04 {
+            bindings = <&kp SLASH>;
+            key-positions = <18 19>;
+            require-prior-idle-ms = <150>;
             layers = <0>;
         };
     };
