@@ -80,17 +80,17 @@ layers:
   - Ctrl
   - Shift
   - Alt+Sft+↹
-  - ➕
+  - 🟰
   - '7'
   - '8'
   - '9'
-  - 🟰
+  - Calc
   - {t: Win, h: sticky}
   - {t: Alt, h: sticky}
   - {t: Ctrl, h: sticky}
   - {t: Shift, h: sticky}
-  - Calc
-  - ➖
+  - Alt+Alt+V
+  - ✖️
   - '4'
   - '5'
   - '6'
@@ -100,7 +100,7 @@ layers:
   - Ctl+1
   - Ctl+Sft+V
   - Alt+↹
-  - ✖️
+  - ➗
   - '1'
   - '2'
   - '3'
@@ -108,8 +108,8 @@ layers:
   - Esc
   - ␣
   - {type: held}
-  - ↹
-  - ➗
+  - ➕
+  - ➖
   - ⌫
   SYM:
   - '`'
@@ -311,4 +311,16 @@ combos:
   l: [Base]
 - p: [18, 19]
   k: /
+  l: [Base]
+- p: [2, 3]
+  k: '>'
+  l: [Base]
+- p: [6, 7]
+  k: <
+  l: [Base]
+- p: [1, 2]
+  k: '|'
+  l: [Base]
+- p: [7, 8]
+  k: <
   l: [Base]
