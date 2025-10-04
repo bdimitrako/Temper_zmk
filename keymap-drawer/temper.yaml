@@ -322,5 +322,5 @@ combos:
   k: '|'
   l: [Base]
 - p: [7, 8]
-  k: <
+  k: '='
   l: [Base]
