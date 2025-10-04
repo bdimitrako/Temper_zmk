@@ -181,7 +181,7 @@
             layers = <0>;
         };  
         symUp04 {
-            bindings = <&kp LESS_THAN>;
+            bindings = <&kp EQUAL>;
             key-positions = <7 8>;
             require-prior-idle-ms = <150>;
             layers = <0>;
