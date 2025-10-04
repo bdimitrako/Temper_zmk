@@ -163,13 +163,13 @@
             layers = <0>;
         };
         symUp01 {
-            bindings = <&kp GREATER_THAN>;
+            bindings = <&kp LESS_THAN>;
             key-positions = <2 3>;
             require-prior-idle-ms = <150>;
             layers = <0>;
         };    
         symUp02 {
-            bindings = <&kp LESS_THAN>;
+            bindings = <&kp GREATER_THAN>;
             key-positions = <6 7>;
             require-prior-idle-ms = <150>;
             layers = <0>;
