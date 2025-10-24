@@ -264,7 +264,10 @@ combos:
   k: Lang Switch
   l: [Base]
 - p: [26, 27]
-  k: Caps Word
+  k: minus
+  l: [Base]
+- p: [27, 28]
+  k: under
   l: [Base]
 - p: [6, 16]
   k: ↹
