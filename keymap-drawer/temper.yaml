@@ -267,7 +267,7 @@ combos:
   k: '-'
   l: [Base]
 - p: [27, 28]
-  k: _
+  k: Ctrl
   l: [Base]
 - p: [6, 16]
   k: ↹
