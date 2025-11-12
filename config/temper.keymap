@@ -194,6 +194,12 @@
             require-prior-idle-ms = <150>;
             layers = <0>;
         };  
+        excelalt {
+            bindings = <&kp LALT>;
+            key-positions = <21 22>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
     };
 
     keymap {
