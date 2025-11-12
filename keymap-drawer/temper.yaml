@@ -327,3 +327,6 @@ combos:
 - p: [7, 8]
   k: '='
   l: [Base]
+- p: [21, 22]
+  k: Alt
+  l: [Base]
