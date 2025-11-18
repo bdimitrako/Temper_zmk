@@ -297,9 +297,6 @@ combos:
 - p: [11, 12]
   k: '['
   l: [Base]
-- p: [12, 13]
-  k: Alt
-  l: [Base]
 - p: [13, 14]
   k: (
   l: [Base]
@@ -328,5 +325,8 @@ combos:
   k: '='
   l: [Base]
 - p: [21, 22]
+  k: Alt
+  l: [Base]
+- p: [25, 26]
   k: _
   l: [Base]
