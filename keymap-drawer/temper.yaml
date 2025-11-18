@@ -89,7 +89,7 @@ layers:
   - {t: Alt, h: sticky}
   - {t: Ctrl, h: sticky}
   - {t: Shift, h: sticky}
-  - Alt+Alt+V
+  - Alt+↹
   - ✖️
   - '4'
   - '5'
@@ -99,7 +99,7 @@ layers:
   - Alt+=
   - Ctl+1
   - Ctl+Sft+V
-  - Alt+↹
+  - Ctl+Alt+V
   - ➗
   - '1'
   - '2'
@@ -260,7 +260,7 @@ layers:
   - ⏮
   - ⏭
 combos:
-- p: [3, 13]
+- p: [12, 13]
   k: Lang Switch
   l: [Base]
 - p: [26, 27]
@@ -269,27 +269,27 @@ combos:
 - p: [27, 28]
   k: Ctrl
   l: [Base]
-- p: [6, 16]
+- p: [16, 17]
   k: ↹
   l: [Base]
 - p: [22, 23]
   k: Caps Lock
   l: [Base]
 - p: [7, 17]
-  k: {t: SYM, h: sticky}
+  k: '}'
   l: [Base]
-- p: [0, 10, 20]
+- p: [10, 20]
   k: {t: MSE, h: toggle}
   l: [Base, MSE]
   a: top
   o: -1.0
-- p: [9, 19, 29]
+- p: [19, 29]
   k: {t: NAV, h: toggle}
   l: [Base, NAV]
   a: top
   o: -1.0
 - p: [2, 12]
-  k: {t: NUM, h: sticky}
+  k: '{'
   l: [Base]
 - p: [10, 11]
   k: \
@@ -298,16 +298,16 @@ combos:
   k: '['
   l: [Base]
 - p: [12, 13]
-  k: (
+  k: Alt
   l: [Base]
 - p: [13, 14]
-  k: '{'
+  k: (
   l: [Base]
 - p: [15, 16]
-  k: '}'
+  k: )
   l: [Base]
 - p: [16, 17]
-  k: )
+  k: ↹
   l: [Base]
 - p: [17, 18]
   k: ']'
@@ -328,5 +328,5 @@ combos:
   k: '='
   l: [Base]
 - p: [21, 22]
-  k: Alt
+  k: _
   l: [Base]
