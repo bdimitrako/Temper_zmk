@@ -68,6 +68,7 @@
         langswitchcombo {
             bindings = <&kp LG(SPACE)>;
             key-positions = <12 13>;
+            require-prior-idle-ms = <150>;
             layers = <0>;
         };
         minuscombo {
@@ -127,12 +128,6 @@
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
-        symLeft03 {
-            bindings = <&kp LALT>;
-            key-positions = <12 13>;
-            require-prior-idle-ms = <150>;
-            layers = <0>;
-        };
         symLeft04{
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <13 14>;
@@ -188,8 +183,14 @@
             layers = <0>;
         };  
         symDown01 {
-            bindings = <&kp UNDER>;
+            bindings = <&kp LALT>;
             key-positions = <21 22>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+        symDown02 {
+            bindings = <&kp UNDER>;
+            key-positions = <25 26>;
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
