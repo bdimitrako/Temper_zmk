@@ -1010,18 +1010,19 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g transform="translate(532, 147)" class="key keypos-26">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<a href="#SYM">
+<text x="0" y="0" class="key tap layer-activator">SYM</text>
+</a></g>
+<g transform="translate(588, 140)" class="key keypos-27">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <a href="#NUM">
 <text x="0" y="0" class="key tap layer-activator">NUM</text>
 </a></g>
-<g transform="translate(588, 140)" class="key keypos-27">
+<g transform="translate(644, 147)" class="key keypos-28">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <a href="#NAV">
 <text x="0" y="0" class="key tap layer-activator">NAV</text>
 </a></g>
-<g transform="translate(644, 147)" class="key keypos-28">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">AltGr</text>
-</g>
 <g transform="translate(700, 161)" class="key keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">
