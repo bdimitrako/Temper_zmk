@@ -108,16 +108,25 @@
         togmouse {
             bindings = <&tog 4>;
             key-positions = <10 20>;
+            require-prior-idle-ms = <150>;
             layers = <0 4>;
         };
         tognav {
             bindings = <&tog 1>;
             key-positions = <19 29>;
+            require-prior-idle-ms = <150>;
             layers = <0 1>;
+        };
+        tognum {
+            bindings = <&tog 2>;
+            key-positions = <25 26>;
+            require-prior-idle-ms = <150>;
+            layers = <0 2>;
         };
         singlefingerleft {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <2 12>;
+            require-prior-idle-ms = <150>;
             layers = <0>;
         };
         symLeft01 {
@@ -194,7 +203,7 @@
         };
         symDown02 {
             bindings = <&kp UNDER>;
-            key-positions = <25 26>;
+            key-positions = <23 24>;
             require-prior-idle-ms = <150>;
             layers = <0>;
         };
