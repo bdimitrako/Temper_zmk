@@ -288,6 +288,9 @@ combos:
   l: [Base, NAV]
   a: top
   o: -1.0
+- p: [25, 26]
+  k: {t: NUM, h: toggle}
+  l: [Base, NUM]
 - p: [2, 12]
   k: '{'
   l: [Base]
@@ -327,6 +330,6 @@ combos:
 - p: [21, 22]
   k: Alt
   l: [Base]
-- p: [25, 26]
+- p: [23, 24]
   k: _
   l: [Base]
