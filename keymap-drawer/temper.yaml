@@ -272,7 +272,7 @@ combos:
 - p: [16, 17]
   k: ↹
   l: [Base]
-- p: [22, 23]
+- p: [24, 31]
   k: Caps Lock
   l: [Base]
 - p: [7, 17]
@@ -288,7 +288,7 @@ combos:
   l: [Base, NAV]
   a: top
   o: -1.0
-- p: [25, 26]
+- p: [25, 34]
   k: {t: NUM, h: toggle}
   l: [Base, NUM]
 - p: [2, 12]
@@ -300,12 +300,6 @@ combos:
 - p: [11, 12]
   k: '['
   l: [Base]
-- p: [13, 14]
-  k: (
-  l: [Base]
-- p: [15, 16]
-  k: )
-  l: [Base]
 - p: [16, 17]
   k: ↹
   l: [Base]
@@ -316,10 +310,10 @@ combos:
   k: /
   l: [Base]
 - p: [2, 3]
-  k: <
+  k: (
   l: [Base]
 - p: [6, 7]
-  k: '>'
+  k: )
   l: [Base]
 - p: [1, 2]
   k: '|'
@@ -330,6 +324,6 @@ combos:
 - p: [21, 22]
   k: Alt
   l: [Base]
-- p: [23, 24]
+- p: [22, 23]
   k: _
   l: [Base]
