@@ -275,6 +275,12 @@ combos:
 - p: [24, 31]
   k: Caps Lock
   l: [Base]
+- p: [13, 16]
+  k: Caps Word
+  l: [Base]
+- p: [27, 28]
+  k: .
+  l: [NUM]
 - p: [7, 17]
   k: '}'
   l: [Base]
