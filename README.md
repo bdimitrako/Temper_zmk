@@ -246,3 +246,6 @@ The **Bluetooth & Media layer** handles device switching, media controls, and sy
 ![photo07](photos/IMG_20250310_193424.jpg)
 ![photo08](photos/IMG_20250310_193434.jpg)
 ![photo09](photos/IMG_20250705_132208.jpg)
+![photo10](photos/MVIMG_20251216_092920.jpg)
+![photo11](photos/MVIMG_20251216_092944.jpg)
+![photo12](photos/IMG_20251211_090851.jpg)
