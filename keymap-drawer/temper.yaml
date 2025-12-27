@@ -295,11 +295,11 @@ combos:
   a: top
   o: -1.0
 - p: [33, 34]
-  k: {t: SYM, h: toggle}
-  l: [Base, SYM]
-- p: [33, 34]
   k: {t: NUM, h: toggle}
   l: [Base, NUM]
+- p: [33, 34]
+  k: {t: SYM, h: toggle}
+  l: [Base, SYM]
 - p: [2, 12]
   k: '{'
   l: [Base]
