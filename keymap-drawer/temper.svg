@@ -732,6 +732,10 @@ path.combo { stroke: #7f7f7f; }
 <text x="616" y="144" class="combo tap">.</text>
 </g>
 <g class="combo combopos-1">
+<rect rx="6" ry="6" x="546" y="130" width="28" height="26" class="combo"/>
+<text x="560" y="144" class="combo tap">␣</text>
+</g>
+<g class="combo combopos-2">
 <rect rx="6" ry="6" x="247" y="204" width="28" height="26" class="combo"/>
 <a href="#NUM">
 <text x="261" y="217" class="combo tap layer-activator">NUM</text>
