@@ -130,16 +130,16 @@
             layers = <0 1>;
         };
         tognum {
-            bindings = <&tog 3>;
-            key-positions = <33 34>;
-            require-prior-idle-ms = <150>;
-            layers = <0 3>;
-        };
-        togsym {
             bindings = <&tog 2>;
             key-positions = <33 34>;
             require-prior-idle-ms = <150>;
             layers = <0 2>;
+        };
+        togsym {
+            bindings = <&tog 3>;
+            key-positions = <33 34>;
+            require-prior-idle-ms = <150>;
+            layers = <0 3>;
         };
         singlefingerleft {
             bindings = <&kp LEFT_BRACE>;
