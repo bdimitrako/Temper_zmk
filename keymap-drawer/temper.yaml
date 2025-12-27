@@ -293,7 +293,7 @@ layers:
   - Esc
   - ␣
   - {t: QTY, h: toggle}
-  - tog 7
+  - {t: QTY, h: toggle}
   - ⌫
   - ⌦
 combos:
