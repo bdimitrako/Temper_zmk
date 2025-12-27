@@ -131,7 +131,7 @@
         };
         tognum {
             bindings = <&tog 2>;
-            key-positions = <33 34>;
+            key-positions = <31 32>;
             require-prior-idle-ms = <150>;
             layers = <0 2>;
         };
