@@ -34,7 +34,7 @@ layers:
   - {t: Esc, h: BLT}
   - {t: ␣, h: NAV}
   - {t: Shift, h: NUM}
-  - {t: ⏎, h: SYM}
+  - '&tt'
   - {t: ⌫, h: MSE}
   - {t: ⌦, h: FUN}
   NAV:
@@ -145,7 +145,7 @@ layers:
   - \
   - '?'
   - /
-  - {type: held}
+  - ''
   - Ctl+⌫
   - Ctl+⌦
   MSE:
@@ -259,6 +259,43 @@ layers:
   - ⏯
   - ⏮
   - ⏭
+  QTY:
+  - $
+  - '#'
+  - '@'
+  - '!'
+  - '%'
+  - '`'
+  - (
+  - )
+  - '*'
+  - '&'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '0'
+  - '9'
+  - '8'
+  - '7'
+  - '6'
+  - {t: Win, h: sticky}
+  - {t: Alt, h: sticky}
+  - {t: Ctrl, h: sticky}
+  - {t: Shift, h: sticky}
+  - ↹
+  - Alt+↹
+  - Copy
+  - Paste
+  - Ctl+Page Up
+  - Ctl+PG DOWN
+  - Esc
+  - ␣
+  - {t: QTY, h: toggle}
+  - tog 7
+  - ⌫
+  - ⌦
 combos:
 - p: [12, 13]
   k: Lang Switch
