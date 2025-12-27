@@ -110,6 +110,12 @@
             key-positions = <27 28>;
             require-prior-idle-ms = <150>;
             layers = <2>;
+        };         
+        combo_space {
+            bindings = <&kp SPACE>;
+            key-positions = <26 27>;
+            require-prior-idle-ms = <150>;
+            layers = <2>;
         };
         singlefingermidright {
             bindings = <&kp RIGHT_BRACE>;
