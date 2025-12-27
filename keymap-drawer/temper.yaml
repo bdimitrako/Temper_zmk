@@ -292,7 +292,7 @@ layers:
   - Ctl+Page Down
   - Esc
   - ␣
-  - {t: QTY, h: toggle}
+  - '?'
   - {t: QTY, h: toggle}
   - ⌫
   - ⌦
