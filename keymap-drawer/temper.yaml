@@ -34,7 +34,7 @@ layers:
   - {t: Esc, h: BLT}
   - {t: ␣, h: NAV}
   - {t: Shift, h: NUM}
-  - '&tt'
+  - '&td_lt'
   - {t: ⌫, h: MSE}
   - {t: ⌦, h: FUN}
   NAV:

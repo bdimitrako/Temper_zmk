@@ -276,7 +276,7 @@ path.combo { stroke: #7f7f7f; }
 </a></g>
 <g transform="translate(435, 223) rotate(-30.0)" class="key keypos-33">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
-<text x="0" y="0" class="key tap">&amp;tt</text>
+<text x="0" y="0" class="key tap">&amp;td_lt</text>
 </g>
 <g transform="translate(499, 211) rotate(-15.0)" class="key keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
