@@ -101,7 +101,7 @@
         };
         combo_caps_word {
             bindings = <&caps_word>;
-            key-positions = <13 16>;
+            key-positions = <3 6>;
             require-prior-idle-ms = <150>;
             layers = <0>;
          };
@@ -137,13 +137,13 @@
         };
         tognum {
             bindings = <&tog 2>;
-            key-positions = <31 32>;
+            key-positions = <13 16>;
             require-prior-idle-ms = <150>;
             layers = <0 2>;
         };
         togsym {
             bindings = <&tog 3>;
-            key-positions = <33 34>;
+            key-positions = <23 26>;
             require-prior-idle-ms = <150>;
             layers = <0 3>;
         };
