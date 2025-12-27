@@ -65,6 +65,20 @@
             tapping-term-ms = <200>; // 100, 150
             flavor = "tap-preferred";
         };
+        tt: tog_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
+            display-name = "Tog-Tap";
+        };
+        td_lt: tap_dance_layer_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&tt 3 6>, <&kp ENTER>;
+        };
     };
 
     combos {
@@ -230,7 +244,7 @@
   &kp Q  &kp W  &kp F      &kp P        &kp B                  &kp J        &kp L            &kp U      &kp Y    &kp SQT
   &kp A  &kp R  &kp S      &kp T        &kp G                  &kp M        &kp N            &kp E      &kp I    &kp O
   &kp Z  &kp X  &kp C      &kp D        &kp V                  &kp K        &kp H            &kp COMMA  &kp DOT  &kp SEMI
-                &lt 6 ESC  &lt 1 SPACE  &sk_mo 2 LEFT_SHIFT    &lt 3 ENTER  &lt 4 BACKSPACE  &lt 5 DEL
+                &lt 6 ESC  &lt 1 SPACE  &sk_mo 2 LEFT_SHIFT    &tt          &lt 4 BACKSPACE  &lt 5 DEL
             >;
         };
 
@@ -291,6 +305,16 @@
   &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT       &none          &none             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
   &none         &kp RALT      &kp C_BRI_INC &kp C_BRI_DEC   &none          &kp LG(LA(K))     &kp C_VOL_UP  &kp C_VOL_DN  &none         &bt BT_SEL 4
                               &none         &kp SPACE       &kp LA(TAB)    &kp C_PLAY_PAUSE  &kp C_PREV    &kp C_NEXT
+            >;
+        };
+
+        quicktype {
+            display-name = "QTY";
+            bindings = <
+  &kp DOLLAR &kp HASH  &kp AT     &kp EXCL   &kp PERCENT  &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS &kp STAR       &kp AMPERSAND  
+  &kp N1     &kp N2    &kp N3     &kp N4     &kp N5       &kp N0         &kp N9                &kp N8                &kp N7         &kp N6
+  &sk LGUI   &sk LALT  &sk LCTRL  &sk LSHFT  &kp TAB      &kp LA(TAB)    &kp LC(C)             &kp LC(V)             &kp LC(PG_UP)  &kp LC(PG_DOWN)
+                       &kp ESC    &kp SPACE  &tog 7       &kp tog 7      &kp BACKSPACE         &kp DEL
             >;
         };
     };
