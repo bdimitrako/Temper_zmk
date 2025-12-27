@@ -294,7 +294,7 @@ combos:
   l: [Base, NAV]
   a: top
   o: -1.0
-- p: [33, 34]
+- p: [31, 32]
   k: {t: NUM, h: toggle}
   l: [Base, NUM]
 - p: [33, 34]
