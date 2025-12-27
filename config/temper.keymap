@@ -257,8 +257,8 @@
         sym {
             display-name = "SYM";
             bindings = <
-  &kp GRAVE         &kp AMPERSAND         &kp STAR               &kp CARET          &kp EQUAL      &kp UNDER        &kp RSHFT          &kp RCTRL        &kp LALT      &kp RGUI
-  &kp EXCL          &kp AT                &kp HASH               &kp DOLLAR         &kp PERCENT    &kp TAB          &sk RSHFT          &sk RCTRL        &sk LALT      &sk RGUI
+  &kp CARET         &kp STAR              &kp AMPERSAND          &kp GRAVE          &kp EQUAL      &kp UNDER        &kp RSHFT          &kp RCTRL        &kp LALT      &kp RGUI
+  &kp DOLLAR        &kp HASH              &kp AT                 &kp EXCL           &kp PERCENT    &kp TAB          &sk RSHFT          &sk RCTRL        &sk LALT      &sk RGUI
   &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp MINUS      &kp LEFT_BRACE   &kp PIPE           &kp RIGHT_BRACE  &kp RALT      &kp LG(L)
                                           &kp BSLH               &kp QUESTION       &kp SLASH      &none            &kp LC(BACKSPACE)  &kp LC(DEL)
             >;
