@@ -33,8 +33,8 @@ layers:
   - ;
   - {t: Esc, h: BLT}
   - {t: ␣, h: NAV}
-  - {t: Shift, h: NUM}
-  - '&td_lt'
+  - {t: QTY, h: NUM}
+  - {t: ⏎, h: SYM}
   - {t: ⌫, h: MSE}
   - {t: ⌦, h: FUN}
   NAV:
@@ -145,7 +145,7 @@ layers:
   - \
   - '?'
   - /
-  - ''
+  - {type: held}
   - Ctl+⌫
   - Ctl+⌦
   MSE:
