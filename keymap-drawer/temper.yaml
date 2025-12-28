@@ -286,10 +286,10 @@ layers:
   - {t: Shift, h: sticky}
   - ↹
   - Alt+↹
-  - Copy
-  - Paste
-  - Ctl+Page Up
-  - Ctl+Page Down
+  - '-'
+  - ','
+  - .
+  - ;
   - Esc
   - ␣
   - '?'
