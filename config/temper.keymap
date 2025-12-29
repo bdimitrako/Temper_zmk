@@ -83,6 +83,16 @@
         };
     };
 
+    macros {
+             tog_space: tog_space{
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                            = <&tog 7>
+                            , <&kp SPACE>
+                            ;
+            };
+    };
     combos {
         compatible = "zmk,combos";
         langswitchcombo {
@@ -316,7 +326,7 @@
   &kp DOLLAR &kp HASH  &kp AT     &kp EXCL   &kp PERCENT  &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS &kp STAR       &kp AMPERSAND  
   &kp N1     &kp N2    &kp N3     &kp N4     &kp N5       &kp N0         &kp N9                &kp N8                &kp N7         &kp N6
   &sk LGUI   &sk LALT  &sk LCTRL  &sk LSHFT  &kp TAB      &kp LA(TAB)    &kp MINUS             &kp COMMA             &kp DOT        &kp SEMI
-                       &kp ESC    &kp SPACE  &kp QUESTION &tog 7         &kp BACKSPACE         &kp DEL
+                       &kp ESC    &kp SPACE  &kp QUESTION &tog_space     &kp BACKSPACE         &kp DEL
             >;
         };
     };
