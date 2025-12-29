@@ -293,7 +293,7 @@ layers:
   - Esc
   - ␣
   - '?'
-  - {t: QTY, h: toggle}
+  - '&tog_space'
   - ⌫
   - ⌦
 combos:
