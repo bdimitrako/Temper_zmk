@@ -81,9 +81,9 @@ layers:
   - Shift
   - Alt+Sft+↹
   - 🟰
-  - '7'
-  - '8'
-  - '9'
+  - KP 7
+  - KP 8
+  - KP 9
   - Calc
   - {t: Win, h: sticky}
   - {t: Alt, h: sticky}
@@ -91,19 +91,19 @@ layers:
   - {t: Shift, h: sticky}
   - Alt+↹
   - ✖️
-  - '4'
-  - '5'
-  - '6'
-  - '0'
+  - KP 4
+  - {t: KP 5, h: LNLCK}
+  - KP 6
+  - KP 0
   - Gui+Z
   - Alt+=
   - Ctl+1
   - Ctl+Sft+V
   - Ctl+Alt+V
   - ➗
-  - '1'
-  - '2'
-  - '3'
+  - KP 1
+  - KP 2
+  - KP 3
   - '%'
   - Esc
   - ␣
