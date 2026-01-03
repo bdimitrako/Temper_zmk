@@ -55,9 +55,6 @@
             quick-release;
             ignore-modifiers;
         };
-        &sk {
-            quick-release; //enabling quick release so that that only the next keystroke gets shifted
-        };
         sk_mo: sk_mo {
             compatible = "zmk,behavior-hold-tap";
             label = "SK_MO";
@@ -281,7 +278,7 @@
             display-name = "NAV";
             bindings = <
   &kp LGUI   &kp LALT      &kp LCTRL  &kp LSHFT       &none        &kp INS        &kp HOME      &kp UP        &kp END    &kp PG_UP
-  &sk LGUI   &sk LALT      &sk LCTRL  &sk LSHFT       &kp TAB      &kp CAPS       &kp LEFT      &kp DOWN      &kp RIGHT  &kp PG_DN
+  &skq LGUI  &skq LALT     &skq LCTRL &skq LSHFT      &kp TAB      &kp CAPS       &kp LEFT      &kp DOWN      &kp RIGHT  &kp PG_DN
   &kp LC(Z)  &kp LC(X)     &kp LC(C)  &kp LC(V)       &kp LC(Y)    &none          &kp K_APP     &kp LA(SPACE) &none      &none
                            &kp ESC    &kp SPACE       &kp ENTER    &kp LG(SPACE)  &kp LC(BSPC)  &kp LC(DEL)
             >;
@@ -291,7 +288,7 @@
             display-name = "NUM";
             bindings = <
   &kp LGUI   &kp LALT       &kp LCTRL         &kp LSHFT      &kp LA(LS(TAB))    &kp KP_EQUAL     &kp KP_N7         &kp KP_N8          &kp KP_N9  &kp C_AL_CALC 
-  &sk LGUI   &sk LALT       &sk LCTRL         &sk LSHFT      &kp LA(TAB)        &kp KP_MULTIPLY  &kp KP_N4         &mt KP_NLCK KP_N5  &kp KP_N6  &kp KP_N0
+  &skq LGUI  &skq LALT      &skq LCTRL        &skq LSHFT     &kp LA(TAB)        &kp KP_MULTIPLY  &kp KP_N4         &mt KP_NLCK KP_N5  &kp KP_N6  &kp KP_N0
   &kp LG(Z)  &kp LA(EQUAL)  &kp LC(NUMBER_1)  &kp LC(LS(V))  &kp LC(LA(V))      &kp KP_DIVIDE    &kp KP_N1         &kp KP_N2          &kp KP_N3  &kp PRCNT
                             &kp ESC           &kp SPACE      &none              &kp KP_PLUS      &kp BACKSPACE     &kp KP_MINUS
             >;
@@ -301,7 +298,7 @@
             display-name = "SYM";
             bindings = <
   &kp CARET         &kp STAR              &kp AMPERSAND          &kp GRAVE          &kp EQUAL      &kp UNDER        &kp RSHFT          &kp RCTRL        &kp LALT      &kp RGUI
-  &kp DOLLAR        &kp HASH              &kp AT                 &kp EXCL           &kp PERCENT    &kp TAB          &sk RSHFT          &sk RCTRL        &sk LALT      &sk RGUI
+  &kp DOLLAR        &kp HASH              &kp AT                 &kp EXCL           &kp PERCENT    &kp TAB          &skq RSHFT         &skq RCTRL       &skq LALT      &sk RGUI
   &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp MINUS      &kp LEFT_BRACE   &kp PIPE           &kp RIGHT_BRACE  &kp RALT      &kp LG(L)
                                           &kp BSLH               &kp QUESTION       &kp SLASH      &none            &kp LC(BACKSPACE)  &kp LC(DEL)
             >;
@@ -311,7 +308,7 @@
             display-name = "MSE";
             bindings = <
   &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &mkp MB4         &kp LS(LG(D))  &kp RSHFT        &kp RCTRL  &kp LALT      &kp RGUI
-  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5         &kp LG(LS(S))  &sk RSHFT        &sk RCTRL  &sk LALT      &sk RGUI
+  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5         &kp LG(LS(S))  &skq RSHFT       &skq RCTRL &skq LALT     &skq RGUI
   &kp LC(W)       &kp LC(L)       &kp LC(R)       &kp LC(T)        &kp LC(LS(T))    &kp LS(LG(T))  &mo 3            &mo 2      &mo 1         &kp LA(F4)
                                   &mkp MCLK       &mkp LCLK        &mkp RCLK        &kp ENTER      &kp BSPC         &kp DEL
             >;
@@ -321,7 +318,7 @@
             display-name = "FUN";
             bindings = <
   &kp F12  &kp F7  &kp F8     &kp F9       &kp PAUSE_BREAK    &none      &kp RSHFT        &kp RCTRL  &kp LALT      &kp RGUI
-  &kp F11  &kp F4  &kp F5     &kp F6       &kp PRINTSCREEN    &none      &sk RSHFT        &sk RCTRL  &sk LALT      &sk RGUI
+  &kp F11  &kp F4  &kp F5     &kp F6       &kp PRINTSCREEN    &none      &skq RSHFT       &skq RCTRL &skq LALT    &skq RGUI
   &kp F10  &kp F1  &kp F2     &kp F3       &kp SLCK           &none      &none            &none      &kp RALT      &kp LC(LS(ESC))
                    &kp K_APP  &kp LA(F11)  &kp LA(F12)        &kp ENTER  &kp BSPC         &none
             >;
@@ -330,7 +327,7 @@
         blt {
             display-name = "BLT";
             bindings = <
-  &sk LEFT_GUI  &sk LEFT_ALT  &sk LCTRL     &sk LEFT_SHIFT  &bootloader    &bt BT_CLR        &none         &none         &none         &none
+  &skq LEFT_GUI &skq LEFT_ALT &skq LCTRL    &skq LEFT_SHIFT &bootloader    &bt BT_CLR        &none         &none         &none         &bootloader
   &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT       &none          &none             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3
   &none         &kp RALT      &kp C_BRI_INC &kp C_BRI_DEC   &none          &kp LG(LA(K))     &kp C_VOL_UP  &kp C_VOL_DN  &none         &bt BT_SEL 4
                               &none         &kp SPACE       &kp LA(TAB)    &kp C_PLAY_PAUSE  &kp C_PREV    &kp C_NEXT
