@@ -169,6 +169,12 @@
             require-prior-idle-ms = <150>;
             layers = <0 4>;
         };
+        togqty {
+            bindings = <&tog 7>;
+            key-positions = <31 34>;
+            require-prior-idle-ms = <150>;
+            layers = <0 7>;
+        };
         tognav {
             bindings = <&tog 1>;
             key-positions = <8 18>;
@@ -270,7 +276,7 @@
   &kp Q  &kp W  &kp F      &kp P        &kp B           &kp J        &kp L            &kp U      &kp Y    &kp SQT
   &kp A  &kp R  &kp S      &kp T        &kp G           &kp M        &kp N            &kp E      &kp I    &kp O
   &kp Z  &kp X  &kp C      &kp D        &kp V           &kp K        &kp H            &kp COMMA  &kp DOT  &kp SEMI
-                &lt 6 ESC  &lt 1 SPACE  &tt 2 7         &lt 3 ENTER  &lt 4 BACKSPACE  &lt 5 DEL
+                &lt 6 ESC  &lt 1 SPACE  &sk_mo 7 LSHFT  &lt 3 ENTER  &lt 4 BACKSPACE  &lt 5 DEL
             >;
         };
 
@@ -340,7 +346,7 @@
   &kp DOLLAR &kp HASH  &kp AT     &kp EXCL   &kp PERCENT  &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS &kp STAR       &kp AMPERSAND  
   &kp N0     &kp N1    &kp N2     &kp N3     &sk LSHFT    &kp MINUS      &kp N6                &kp N7                &kp N8         &kp N9
   &sk LGUI   &sk LALT  &sk LCTRL  &kp N4     &kp TAB      &kp LA(TAB)    &kp N5                &kp COMMA             &kp DOT        &kp SEMI
-                       &kp ESC    &kp SPACE  &kp QUESTION &tog_space     &kp BACKSPACE         &kp DEL
+                       &kp ESC    &kp SPACE  &kp QUESTION &kp QUESTION   &kp BACKSPACE         &kp DEL
             >;
         };
     };
