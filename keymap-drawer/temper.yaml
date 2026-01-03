@@ -92,7 +92,7 @@ layers:
   - Alt+↹
   - ✖️
   - KP 4
-  - {t: KP 5, h: LNLCK}
+  - {t: KP 5, h: KP NLCK}
   - KP 6
   - KP 0
   - Gui+Z
