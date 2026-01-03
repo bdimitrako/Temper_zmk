@@ -55,7 +55,9 @@
             quick-release;
             ignore-modifiers;
         };
-
+        &sk {
+            quick-release; //enabling quick release so that that only the next keystroke gets shifted
+        };
         sk_mo: sk_mo {
             compatible = "zmk,behavior-hold-tap";
             label = "SK_MO";
