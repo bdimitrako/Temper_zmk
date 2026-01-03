@@ -33,7 +33,7 @@ layers:
   - ;
   - {t: Esc, h: BLT}
   - {t: ␣, h: NAV}
-  - {t: QTY, h: NUM}
+  - {t: Shift, h: QTY}
   - {t: ⏎, h: SYM}
   - {t: ⌫, h: MSE}
   - {t: ⌦, h: FUN}
@@ -107,7 +107,7 @@ layers:
   - '%'
   - Esc
   - ␣
-  - {type: held}
+  - ''
   - ➕
   - ⌫
   - ➖
@@ -292,8 +292,8 @@ layers:
   - ;
   - Esc
   - ␣
+  - {t: '?', type: held}
   - '?'
-  - '&tog_space'
   - ⌫
   - ⌦
 combos:
@@ -332,6 +332,9 @@ combos:
   l: [Base, MSE]
   a: top
   o: -1.0
+- p: [31, 34]
+  k: {t: QTY, h: toggle}
+  l: [Base, QTY]
 - p: [8, 18]
   k: {t: NAV, h: toggle}
   l: [Base, NAV]
