@@ -346,7 +346,7 @@
   &kp DOLLAR &kp HASH  &kp AT     &kp EXCL   &kp PERCENT  &kp GRAVE      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS &kp STAR       &kp AMPERSAND  
   &kp N0     &kp N1    &kp N2     &kp N3     &sk LSHFT    &kp MINUS      &kp N6                &kp N7                &kp N8         &kp N9
   &sk LGUI   &sk LALT  &sk LCTRL  &kp N4     &kp TAB      &kp LA(TAB)    &kp N5                &kp COMMA             &kp DOT        &kp SEMI
-                       &kp ESC    &kp SPACE  &kp QUESTION &kp QUESTION   &kp BACKSPACE         &kp DEL
+                       &kp ESC    &kp SPACE  &kp QUESTION &kp SLASH      &kp BACKSPACE         &kp DEL
             >;
         };
     };
