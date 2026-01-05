@@ -171,7 +171,7 @@
         };
         togqty {
             bindings = <&tog 7>;
-            key-positions = <31 34>;
+            key-positions = <13 16>;
             require-prior-idle-ms = <150>;
             layers = <0 7>;
         };
@@ -183,7 +183,7 @@
         };
         tognum {
             bindings = <&tog 2>;
-            key-positions = <13 16>;
+            key-positions = <15 16>;
             require-prior-idle-ms = <150>;
             layers = <0 2>;
         };
