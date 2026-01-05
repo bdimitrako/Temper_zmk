@@ -332,7 +332,7 @@ combos:
   l: [Base, MSE]
   a: top
   o: -1.0
-- p: [31, 34]
+- p: [13, 16]
   k: {t: QTY, h: toggle}
   l: [Base, QTY]
 - p: [8, 18]
@@ -340,7 +340,7 @@ combos:
   l: [Base, NAV]
   a: top
   o: -1.0
-- p: [13, 16]
+- p: [15, 16]
   k: {t: NUM, h: toggle}
   l: [Base, NUM]
 - p: [23, 26]
