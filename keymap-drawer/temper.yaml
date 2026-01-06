@@ -297,44 +297,6 @@ layers:
   - ⌫
   - ⌦
 combos:
-- p: [12, 13]
-  k: Lang Switch
-  l: [Base]
-- p: [26, 27]
-  k: '-'
-  l: [Base]
-- p: [27, 28]
-  k: Ctrl
-  l: [Base]
-- p: [16, 17]
-  k: ↹
-  l: [Base]
-- p: [32, 33]
-  k: {t: Base, h: toggle}
-  l: [NAV, NUM, SYM, MSE, FUN, BLT, QTY]
-- p: [22, 23]
-  k: Caps Lock
-  l: [Base]
-- p: [3, 6]
-  k: Caps Word
-  l: [Base]
-- p: [27, 28]
-  k: .
-  l: [NUM]
-- p: [26, 27]
-  k: ␣
-  l: [NUM]
-- p: [7, 17]
-  k: '}'
-  l: [Base]
-- p: [1, 11]
-  k: {t: MSE, h: toggle}
-  l: [Base, MSE]
-  a: top
-  o: -1.0
-- p: [13, 16]
-  k: {t: QTY, h: toggle}
-  l: [Base, QTY]
 - p: [8, 18]
   k: {t: NAV, h: toggle}
   l: [Base, NAV]
@@ -346,8 +308,34 @@ combos:
 - p: [23, 26]
   k: {t: SYM, h: toggle}
   l: [Base, SYM]
-- p: [2, 12]
-  k: '{'
+- p: [1, 11]
+  k: {t: MSE, h: toggle}
+  l: [Base, MSE]
+  a: top
+  o: -1.0
+- p: [13, 16]
+  k: {t: QTY, h: toggle}
+  l: [Base, QTY]
+- p: [32, 33]
+  k: {t: Base, h: toggle}
+  l: [NAV, NUM, SYM, MSE, FUN, BLT, QTY]
+- p: [21, 22]
+  k: Alt
+  l: [Base]
+- p: [27, 28]
+  k: Ctrl
+  l: [Base]
+- p: [12, 13]
+  k: Lang Switch
+  l: [Base]
+- p: [22, 23]
+  k: Caps Lock
+  l: [Base]
+- p: [3, 6]
+  k: Caps Word
+  l: [Base]
+- p: [16, 17]
+  k: ↹
   l: [Base]
 - p: [10, 11]
   k: \
@@ -355,8 +343,8 @@ combos:
 - p: [11, 12]
   k: '['
   l: [Base]
-- p: [16, 17]
-  k: ↹
+- p: [2, 12]
+  k: '{'
   l: [Base]
 - p: [17, 18]
   k: ']'
@@ -364,21 +352,30 @@ combos:
 - p: [18, 19]
   k: /
   l: [Base]
-- p: [2, 3]
+- p: [7, 17]
+  k: '}'
+  l: [Base]
+- p: [1, 2]
   k: (
   l: [Base]
 - p: [6, 7]
   k: )
   l: [Base]
-- p: [1, 2]
+- p: [2, 3]
   k: '|'
   l: [Base]
 - p: [7, 8]
   k: '='
   l: [Base]
-- p: [21, 22]
-  k: Alt
-  l: [Base]
 - p: [25, 26]
   k: _
   l: [Base]
+- p: [26, 27]
+  k: '-'
+  l: [Base]
+- p: [26, 27]
+  k: ␣
+  l: [NUM]
+- p: [27, 28]
+  k: .
+  l: [NUM]
