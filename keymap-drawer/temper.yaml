@@ -34,7 +34,7 @@ layers:
   - {t: Esc, h: BLT}
   - {t: ␣, h: NAV}
   - {t: Shift, h: QTY}
-  - {t: ⏎, h: SYM}
+  - {t: RET, h: SYM}
   - {t: ⌫, h: MSE}
   - {t: ⌦, h: FUN}
   NAV:
@@ -70,7 +70,7 @@ layers:
   - ''
   - Esc
   - {t: ␣, type: held}
-  - ⏎
+  - RET
   - Lang Switch
   - Ctl+⌫
   - Ctl+⌦
@@ -182,7 +182,7 @@ layers:
   - Middle Click
   - Left Click
   - Right Click
-  - ⏎
+  - RET
   - {t: ⌫, type: held}
   - ⌦
   FUN:
@@ -219,7 +219,7 @@ layers:
   - APP
   - Alt+F11
   - Alt+F12
-  - ⏎
+  - RET
   - ⌫
   - {type: held}
   BLT:
@@ -260,11 +260,11 @@ layers:
   - ⏮
   - ⏭
   QTY:
-  - $
-  - '#'
-  - '@'
-  - '!'
-  - '%'
+  - Gui+Z
+  - Alt+=
+  - Ctl+1
+  - Ctl+Sft+V
+  - Ctl+Alt+V
   - '`'
   - (
   - )
