@@ -126,9 +126,9 @@
     rgtbrccombo   { bindings = <&kp RIGHT_BRACE>;   key-positions = <7 17>;  require-prior-idle-ms = <150>; layers = <0>; };
     
     // Top row symbols
-    lftparencombo { bindings = <&kp LEFT_PARENTHESIS>;  key-positions = <1 2>; require-prior-idle-ms = <150>; layers = <0>; };
+    lftparencombo { bindings = <&kp LEFT_PARENTHESIS>;  key-positions = <2 3>; require-prior-idle-ms = <150>; layers = <0>; };
     rgtparencombo { bindings = <&kp RIGHT_PARENTHESIS>; key-positions = <6 7>; require-prior-idle-ms = <150>; layers = <0>; };
-    pipecombo     { bindings = <&kp PIPE>;              key-positions = <2 3>; require-prior-idle-ms = <150>; layers = <0>; };
+    pipecombo     { bindings = <&kp PIPE>;              key-positions = <1 2>; require-prior-idle-ms = <150>; layers = <0>; };
     equalcombo    { bindings = <&kp EQUAL>;             key-positions = <7 8>; require-prior-idle-ms = <150>; layers = <0>; };
     
     // Bottom row
