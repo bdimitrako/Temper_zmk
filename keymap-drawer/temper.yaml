@@ -265,7 +265,7 @@ layers:
   - Ctl+1
   - Ctl+Sft+V
   - Ctl+Alt+V
-  - '`'
+  - {t: +, s: '*'}
   - (
   - )
   - '*'
@@ -275,25 +275,25 @@ layers:
   - '2'
   - '3'
   - {t: Shift, h: sticky}
-  - '-'
-  - '6'
-  - '7'
+  - {t: '-', s: /}
   - '8'
-  - '9'
+  - '7'
+  - '6'
+  - '5'
   - {t: Win, h: sticky}
   - {t: Alt, h: sticky}
   - {t: Ctrl, h: sticky}
   - '4'
   - ↹
-  - Alt+↹
-  - '5'
+  - '='
+  - '9'
   - ','
   - .
   - ;
   - Esc
-  - ␣
+  - {t: ␣, h: NAV}
   - {t: '?', type: held}
-  - /
+  - RET
   - ⌫
   - ⌦
 combos:
