@@ -81,6 +81,19 @@
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap";
         };
+        plstr: plus_star {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp STAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mnslh: minus_slash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp FSLH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -216,10 +229,10 @@
         quicktype {
             display-name = "QTY";
             bindings = <
-  &kp LG(Z)  &kp LA(EQUAL)  &kp LC(N1) &kp LC(LS(V))  &kp LC(LA(V))  &kp GRAVE   &kp LPAR  &kp RPAR  &kp STAR  &kp AMPS  
-  &kp N0     &kp N1         &kp N2     &kp N3         &sk LSHFT      &kp MINUS   &kp N6    &kp N7    &kp N8    &kp N9
-  &sk LGUI   &sk LALT       &sk LCTRL  &kp N4         &kp TAB        &kp LA(TAB) &kp N5    &kp COMMA &kp DOT   &kp SEMI
-                            &kp ESC    &kp SPACE      &kp QMARK      &kp FSLH    &kp BSPC  &kp DEL
+  &kp LG(Z)  &kp LA(EQUAL)  &kp LC(N1) &kp LC(LS(V))  &kp LC(LA(V))  &plstr      &kp LPAR  &kp RPAR  &kp STAR  &kp AMPS  
+  &kp N0     &kp N1         &kp N2     &kp N3         &sk LSHFT      &mnslh      &kp N8   &kp N7    &kp N6    &kp N5
+  &sk LGUI   &sk LALT       &sk LCTRL  &kp N4         &kp TAB        &kp EQUAL   &kp N9    &kp COMMA &kp DOT   &kp SEMI
+                            &kp ESC    &lt 1 SPACE    &kp QMARK      &kp RET     &kp BSPC  &kp DEL
             >;
         };
     };
