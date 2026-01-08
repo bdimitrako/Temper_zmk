@@ -229,10 +229,10 @@
         quicktype {
             display-name = "QTY";
             bindings = <
-  &kp LG(Z)  &kp LA(EQUAL)  &kp LC(N1) &kp LC(LS(V))  &kp LC(LA(V))  &plstr      &kp LPAR  &kp RPAR  &kp STAR  &kp AMPS  
-  &kp N0     &kp N1         &kp N2     &kp N3         &sk LSHFT      &mnslh      &kp N8   &kp N7    &kp N6    &kp N5
-  &sk LGUI   &sk LALT       &sk LCTRL  &kp N4         &kp TAB        &kp EQUAL   &kp N9    &kp COMMA &kp DOT   &kp SEMI
-                            &kp ESC    &lt 1 SPACE    &kp QMARK      &kp RET     &kp BSPC  &kp DEL
+  &kp LG(Z)  &kp LA(EQUAL)  &kp LC(N1) &kp LC(LS(V))  &kp LC(LA(V))  &plstr      &kp LBKT  &kp RBKT  &kp BSLH  &kp EQUAL
+  &kp N1     &kp N2         &kp N3     &kp N4         &sk LSHFT      &mnslh      &kp N9    &kp N8    &kp N7    &kp N6
+  &sk LGUI   &sk LALT       &sk LCTRL  &kp N5         &kp TAB        &kp UNDER   &kp N0    &kp COMMA &kp DOT   &kp SEMI
+                            &kp ESC    &kp SPACE      &kp QMARK      &kp RET     &kp BSPC  &kp DEL
             >;
         };
     };
