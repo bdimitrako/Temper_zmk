@@ -189,10 +189,10 @@
         sym {
             display-name = "SYM";
             bindings = <
-  &kp CARET  &kp STAR &kp AMPS &kp GRAVE &kp EQUAL     &kp UNDER &kp RSHFT    &kp RCTRL  &kp LALT  &kp RGUI
-  &kp DOLLAR &kp HASH &kp AT   &kp EXCL  &kp PERCENT   &kp TAB   &skq RSHFT   &skq RCTRL &skq LALT &sk RGUI
-  &kp LBKT   &kp LPAR &kp RPAR &kp RBKT  &kp MINUS     &kp LBRC  &kp PIPE     &kp RBRC   &kp RALT  &kp LG(L)
-                      &kp BSLH &kp QMARK &kp SLASH     &none     &kp LC(BSPC) &kp LC(DEL)
+  &kp GRAVE  &kp STAR  &kp AMPS  &kp UNDER &kp CARET      &kp PLUS   &kp EQUAL    &kp TILDE  &kp LALT  &kp RGUI
+  &kp LPAR   &kp LBKT  &kp RBKT  &kp RPAR  &kp COLON      &kp AT     &sk RSHFT    &sk RCTRL  &sk LALT   &sk RGUI
+  &kp LBRC   &kp LT    &kp GT    &kp RBRC  &kp PERCENT    &kp HASH   &kp BSLH     &kp PIPE   &kp SLASH  &kp LG(L)
+                       &kp ESC   &kp QMARK &kp EXCL       &none      &kp LC(BSPC) &kp LC(DEL)
             >;
         };
 
