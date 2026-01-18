@@ -84,7 +84,7 @@ layers:
   - {t: '7', s: HOME}
   - {t: '8', s: ↑}
   - {t: '9', s: PGUP}
-  - Calc
+  - {t: Calc, h: '%'}
   - {t: Win, h: sticky}
   - {t: Alt, h: sticky}
   - {t: Ctrl, h: sticky}
@@ -92,7 +92,7 @@ layers:
   - Alt+↹
   - {t: ➖, s: ➗}
   - {t: '4', s: ←}
-  - {t: '5', s: CLR}
+  - '5'
   - {t: '6', s: →}
   - {t: '0', s: INS}
   - Gui+Z
@@ -104,12 +104,12 @@ layers:
   - {t: '1', s: END}
   - {t: '2', s: ↓}
   - {t: '3', s: PGDN}
-  - '%'
+  - Num
   - Esc
   - ␣
   - ''
   - ⏎
-  - {t: ⌫, h: .}
+  - ⌫
   - {t: ., s: DEL}
   SYM:
   - {t: '`', s: '~'}
