@@ -197,6 +197,34 @@ parse_config:
     TILDE2: '~'
     # custom mappings
     
+    # --- Updated Number Row ---
+    GRAVE: {t: '`', s: '~'}
+    N1: {t: '1', s: '!'}
+    N2: {t: '2', s: '@'}
+    N3: {t: '3', s: '#'}
+    N4: {t: '4', s: '$'}
+    N5: {t: '5', s: '%'}
+    N6: {t: '6', s: '^'}
+    N7: {t: '7', s: '&'}
+    N8: {t: '8', s: '*'}
+    N9: {t: '9', s: '('}
+    N0: {t: '0', s: ')'}
+    MINUS: {t: '-', s: '_'}
+    EQUAL: {t: '=', s: '+'}
+
+    # --- Updated Keypad (Numpad) ---
+    KP_N7: {t: '7', s: 'HOME'}
+    KP_N8: {t: '8', s: '↑'}
+    KP_N9: {t: '9', s: 'PGUP'}
+    KP_N4: {t: '4', s: '←'}
+    KP_N5: {t: '5', s: 'CLR'}
+    KP_N6: {t: '6', s: '→'}
+    KP_N1: {t: '1', s: 'END'}
+    KP_N2: {t: '2', s: '↓'}
+    KP_N3: {t: '3', s: 'PGDN'}
+    KP_N0: {t: '0', s: 'INS'}
+    KP_DOT: {t: '.', s: 'DEL'}
+
     C_VOL_UP: Vol Up
     C_VOL_DN: Vol Down
     C_AL_CALC: Calc
@@ -227,6 +255,7 @@ parse_config:
     BSPC: ⌫
     BACKSPACE: ⌫
     ENTER: ⏎
+    RET: ⏎
     TAB: ↹
     DEL: ⌦
 
