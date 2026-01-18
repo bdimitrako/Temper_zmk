@@ -80,7 +80,7 @@ layers:
   - Ctrl
   - Shift
   - Alt+Sft+↹
-  - {t: ➖, s: ➗}
+  - {t: ➕, s: ✖️}
   - {t: '7', s: HOME}
   - {t: '8', s: ↑}
   - {t: '9', s: PGUP}
@@ -90,7 +90,7 @@ layers:
   - {t: Ctrl, h: sticky}
   - {t: Shift, h: sticky}
   - Alt+↹
-  - {t: ➕, s: ✖️}
+  - {t: ➖, s: ➗}
   - {t: '4', s: ←}
   - {t: '5', s: CLR}
   - {t: '6', s: →}
