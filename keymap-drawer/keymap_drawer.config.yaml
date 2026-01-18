@@ -225,6 +225,26 @@ parse_config:
     KP_N0: {t: '0', s: 'INS'}
     KP_DOT: {t: '.', s: 'DEL'}
 
+    # Punctuation & Brackets
+    COMMA: {t: ',', s: '<'}
+    PERIOD: {t: '.', s: '>'}
+    DOT: {t: '.', s: '>'}
+    SLASH: {t: '/', s: '?'}
+    FSLH: {t: '/', s: '?'}
+    SEMICOLON: {t: ';', s: ':'}
+    SEMI: {t: ';', s: ':'}
+    SINGLE_QUOTE: {t: "'", s: '"'}
+    SQT: {t: "'", s: '"'}
+    APOSTROPHE: {t: "'", s: '"'}
+    APOS: {t: "'", s: '"'}
+    LEFT_BRACKET: {t: '[', s: '{'}
+    LBKT: {t: '[', s: '{'}
+    RIGHT_BRACKET: {t: ']', s: '}'}
+    RBKT: {t: ']', s: '}'}
+    BACKSLASH: {t: '\', s: '|'}
+    BSLH: {t: '\', s: '|'}
+    GRAVE: {t: '`', s: '~'}
+
     C_VOL_UP: Vol Up
     C_VOL_DN: Vol Down
     C_AL_CALC: Calc
