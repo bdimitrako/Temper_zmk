@@ -203,10 +203,10 @@
         num {
             display-name = "NUM";
             bindings = <
-  &kp LGUI   &kp LALT       &kp LCTRL   &kp LSHFT      &kp LA(LS(TAB))    &KP_plstr  &kp KP_N7       &kp KP_N8  &kp KP_N9  &kp C_AL_CALC 
-  &skq LGUI  &skq LALT      &skq LCTRL  &skq LSHFT     &kp LA(TAB)        &KP_mnslh  &kp KP_N4       &kp KP_N5  &kp KP_N6  &kp KP_N0
-  &kp LG(Z)  &kp LA(EQUAL)  &kp LC(N1)  &kp LC(LS(V))  &kp LC(LA(V))      &skq LSHFT &kp KP_N1       &kp KP_N2  &kp KP_N3  &kp PRCNT
-                            &kp ESC     &kp SPACE      &none              &kp RET    &mt KP_DOT BSPC &kp KP_DOT
+  &kp LGUI   &kp LALT       &kp LCTRL   &kp LSHFT      &kp LA(LS(TAB))    &KP_plstr  &kp KP_N7 &kp KP_N8  &kp KP_N9  &mt PERCENT C_AL_CALC 
+  &skq LGUI  &skq LALT      &skq LCTRL  &skq LSHFT     &kp LA(TAB)        &KP_mnslh  &kp KP_N4 &kp KP_N5  &kp KP_N6  &kp KP_N0
+  &kp LG(Z)  &kp LA(EQUAL)  &kp LC(N1)  &kp LC(LS(V))  &kp LC(LA(V))      &skq LSHFT &kp KP_N1 &kp KP_N2  &kp KP_N3  &kp KP_NLCK
+                            &kp ESC     &kp SPACE      &none              &kp RET    &kp BSPC  &kp KP_DOT
             >;
         };
 

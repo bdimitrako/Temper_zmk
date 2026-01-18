@@ -217,13 +217,15 @@ parse_config:
     KP_N8: {t: '8', s: '↑'}
     KP_N9: {t: '9', s: 'PGUP'}
     KP_N4: {t: '4', s: '←'}
-    KP_N5: {t: '5', s: 'CLR'}
+    KP_N5: {t: '5', s: ''}
     KP_N6: {t: '6', s: '→'}
     KP_N1: {t: '1', s: 'END'}
     KP_N2: {t: '2', s: '↓'}
     KP_N3: {t: '3', s: 'PGDN'}
     KP_N0: {t: '0', s: 'INS'}
     KP_DOT: {t: '.', s: 'DEL'}
+    KP_NLCK: {t: 'Num', s: ''}
+ 
 
     # Punctuation & Brackets
     COMMA: {t: ',', s: '<'}
