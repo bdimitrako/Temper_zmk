@@ -34,7 +34,7 @@ layers:
   - {t: Esc, h: BLT}
   - {t: ␣, h: NAV}
   - {t: Shift, h: QTY}
-  - {t: RET, h: SYM}
+  - {t: ⏎, h: SYM}
   - {t: ⌫, h: MSE}
   - {t: ⌦, h: FUN}
   NAV:
@@ -70,8 +70,8 @@ layers:
   - APP
   - Esc
   - {t: ␣, type: held}
-  - Alt+=
-  - RET
+  - {t: Alt+=, s: Alt++}
+  - ⏎
   - Ctl+⌫
   - Ctl+⌦
   NUM:
@@ -81,9 +81,9 @@ layers:
   - Shift
   - Alt+Sft+↹
   - {t: ➖, s: ➗}
-  - KP 7
-  - KP 8
-  - KP 9
+  - {t: '7', s: HOME}
+  - {t: '8', s: ↑}
+  - {t: '9', s: PGUP}
   - Calc
   - {t: Win, h: sticky}
   - {t: Alt, h: sticky}
@@ -91,36 +91,36 @@ layers:
   - {t: Shift, h: sticky}
   - Alt+↹
   - {t: ➕, s: ✖️}
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP 0
+  - {t: '4', s: ←}
+  - {t: '5', s: CLR}
+  - {t: '6', s: →}
+  - {t: '0', s: INS}
   - Gui+Z
-  - Alt+=
-  - Ctl+1
+  - {t: Alt+=, s: Alt++}
+  - {t: Ctl+1, s: Ctl+!}
   - Ctl+Sft+V
   - Ctl+Alt+V
   - {t: Shift, h: sticky}
-  - KP 1
-  - KP 2
-  - KP 3
+  - {t: '1', s: END}
+  - {t: '2', s: ↓}
+  - {t: '3', s: PGDN}
   - '%'
   - Esc
   - ␣
   - ''
-  - RET
-  - {t: ⌫, h: KP DOT}
-  - KP DOT
+  - ⏎
+  - {t: ⌫, h: .}
+  - {t: ., s: DEL}
   SYM:
-  - '`'
+  - {t: '`', s: '~'}
   - '*'
   - '&'
   - _
   - ^
   - '!'
-  - '='
-  - '-'
-  - '`'
+  - {t: '=', s: +}
+  - {t: '-', s: _}
+  - {t: '`', s: '~'}
   - Win
   - (
   - '['
@@ -182,7 +182,7 @@ layers:
   - Middle Click
   - Left Click
   - Right Click
-  - RET
+  - ⏎
   - {t: ⌫, type: held}
   - ⌦
   FUN:
@@ -219,7 +219,7 @@ layers:
   - APP
   - Alt+F11
   - Alt+F12
-  - RET
+  - ⏎
   - ⌫
   - {type: held}
   BLT:
@@ -261,39 +261,39 @@ layers:
   - ⏭
   QTY:
   - Gui+Z
-  - Alt+=
-  - Ctl+1
+  - {t: Alt+=, s: Alt++}
+  - {t: Ctl+1, s: Ctl+!}
   - Ctl+Sft+V
   - Ctl+Alt+V
   - {t: +, s: '*'}
   - '['
   - ']'
   - \
-  - '='
-  - '1'
-  - '2'
-  - '3'
-  - '4'
+  - {t: '=', s: +}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
   - {t: Shift, h: sticky}
   - {t: '-', s: /}
-  - '9'
-  - '8'
-  - '7'
-  - '6'
+  - {t: '9', s: (}
+  - {t: '8', s: '*'}
+  - {t: '7', s: '&'}
+  - {t: '6', s: ^}
   - {t: Win, h: sticky}
   - {t: Alt, h: sticky}
   - {t: Ctrl, h: sticky}
-  - '5'
+  - {t: '5', s: '%'}
   - ↹
   - _
-  - '0'
+  - {t: '0', s: )}
   - ','
   - .
   - ;
   - Esc
   - ␣
   - {t: '?', type: held}
-  - RET
+  - ⏎
   - ⌫
   - ⌦
 combos:
@@ -365,13 +365,13 @@ combos:
   k: '|'
   l: [Base]
 - p: [7, 8]
-  k: '='
+  k: {t: '=', s: +}
   l: [Base]
 - p: [25, 26]
   k: _
   l: [Base]
 - p: [26, 27]
-  k: '-'
+  k: {t: '-', s: _}
   l: [Base]
 - p: [26, 27]
   k: ␣
