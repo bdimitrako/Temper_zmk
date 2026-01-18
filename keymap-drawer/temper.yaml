@@ -42,8 +42,8 @@ layers:
   - Alt
   - Ctrl
   - Shift
-  - ''
-  - Insert
+  - Tab Left
+  - Alt+Sft+↹
   - Home
   - ↑
   - End
@@ -52,8 +52,8 @@ layers:
   - {t: Alt, h: sticky}
   - {t: Ctrl, h: sticky}
   - {t: Shift, h: sticky}
-  - ↹
-  - Caps Lock
+  - Tab Right
+  - Alt+↹
   - ←
   - ↓
   - →
@@ -63,15 +63,15 @@ layers:
   - Copy
   - Paste
   - Redo
-  - ''
-  - APP
+  - Insert
+  - Sft+␣
+  - Ctl+␣
   - Alt+␣
-  - ''
-  - ''
+  - APP
   - Esc
   - {t: ␣, type: held}
+  - Alt+=
   - RET
-  - Lang Switch
   - Ctl+⌫
   - Ctl+⌦
   NUM:
@@ -80,7 +80,7 @@ layers:
   - Ctrl
   - Shift
   - Alt+Sft+↹
-  - 🟰
+  - '&KP_minus_slash'
   - KP 7
   - KP 8
   - KP 9
@@ -90,9 +90,9 @@ layers:
   - {t: Ctrl, h: sticky}
   - {t: Shift, h: sticky}
   - Alt+↹
-  - ✖️
+  - {t: ➕, s: ✖️}
   - KP 4
-  - {t: KP 5, h: KP NLCK}
+  - KP 5
   - KP 6
   - KP 0
   - Gui+Z
@@ -100,7 +100,7 @@ layers:
   - Ctl+1
   - Ctl+Sft+V
   - Ctl+Alt+V
-  - ➗
+  - {t: Shift, h: sticky}
   - KP 1
   - KP 2
   - KP 3
@@ -108,26 +108,26 @@ layers:
   - Esc
   - ␣
   - ''
-  - ➕
-  - ⌫
-  - ➖
+  - RET
+  - {t: ⌫, h: KP DOT}
+  - KP DOT
   SYM:
   - '`'
   - '*'
   - '&'
   - _
   - ^
-  - +
+  - '!'
   - '='
-  - '~'
-  - Alt
+  - '-'
+  - '`'
   - Win
   - (
   - '['
   - ']'
   - )
   - ':'
-  - '@'
+  - '?'
   - {t: Shift, h: sticky}
   - {t: Ctrl, h: sticky}
   - {t: Alt, h: sticky}
@@ -143,9 +143,9 @@ layers:
   - /
   - Lock
   - Esc
+  - ␣
   - '?'
-  - '!'
-  - {type: held}
+  - {t: ⏎, type: held}
   - Ctl+⌫
   - Ctl+⌦
   MSE:
