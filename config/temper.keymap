@@ -81,17 +81,41 @@
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap";
         };
+        lpb: left_paren_brace {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp LBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        }; 
+        rpb: right_paren_brace {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp RBRC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };        
         plstr: plus_star {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PLUS>, <&kp STAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         mnslh: minus_slash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp FSLH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        KP_plstr: KP_plus_star {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_PLUS>, <&kp KP_MULTIPLY>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        KP_mnslh: KP_minus_slash {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp KP_MINUS>, <&kp KP_DIVIDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
@@ -148,7 +172,7 @@
     undercombo { bindings = <&kp UNDER>; key-positions = <25 26>; require-prior-idle-ms = <150>; layers = <0>; };
     minuscombo { bindings = <&kp MINUS>; key-positions = <26 27>; require-prior-idle-ms = <150>; layers = <0>; };
     
-    // Layer 2 specific
+    // Layer 2 specific Num Layer
     combo_space   { bindings = <&kp SPACE>; key-positions = <26 27>; require-prior-idle-ms = <150>; layers = <2>; };
     combo_decimal { bindings = <&kp DOT>;   key-positions = <27 28>; require-prior-idle-ms = <150>; layers = <2>; };
 };
@@ -169,30 +193,30 @@
         nav {
             display-name = "NAV";
             bindings = <
-  &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT       &none     &kp INS       &kp HOME     &kp UP        &kp END   &kp PG_UP
-  &skq LGUI  &skq LALT &skq LCTRL &skq LSHFT      &kp TAB   &kp CAPS      &kp LEFT     &kp DOWN      &kp RIGHT &kp PG_DN
-  &kp LC(Z)  &kp LC(X) &kp LC(C)  &kp LC(V)       &kp LC(Y) &none         &kp K_APP    &kp LA(SPACE) &none     &none
-                       &kp ESC    &kp SPACE       &kp RET   &kp LG(SPACE) &kp LC(BSPC) &kp LC(DEL)
+  &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(LS(TAB))   &kp LA(LS(TAB)) &kp HOME      &kp UP        &kp END       &kp PG_UP
+  &skq LGUI  &skq LALT &skq LCTRL &skq LSHFT &kp LC(TAB)       &kp LA(TAB)     &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN
+  &kp LC(Z)  &kp LC(X) &kp LC(C)  &kp LC(V)  &kp LC(Y)         &kp INS         &kp LS(SPACE) &kp LC(SPACE) &kp LA(SPACE) &kp K_APP 
+                       &kp ESC    &kp SPACE  &kp LA(EQUAL)     &kp RET         &kp LC(BSPC)  &kp LC(DEL)
             >;
         };
 
         num {
             display-name = "NUM";
             bindings = <
-  &kp LGUI   &kp LALT       &kp LCTRL   &kp LSHFT      &kp LA(LS(TAB))    &kp KP_EQUAL     &kp KP_N7    &kp KP_N8          &kp KP_N9  &kp C_AL_CALC 
-  &skq LGUI  &skq LALT      &skq LCTRL  &skq LSHFT     &kp LA(TAB)        &kp KP_MULTIPLY  &kp KP_N4    &mt KP_NLCK KP_N5  &kp KP_N6  &kp KP_N0
-  &kp LG(Z)  &kp LA(EQUAL)  &kp LC(N1)  &kp LC(LS(V))  &kp LC(LA(V))      &kp KP_DIVIDE    &kp KP_N1    &kp KP_N2          &kp KP_N3  &kp PRCNT
-                            &kp ESC     &kp SPACE      &none              &kp KP_PLUS      &kp BSPC     &kp KP_MINUS
+  &kp LGUI   &kp LALT       &kp LCTRL   &kp LSHFT      &kp LA(LS(TAB))    &KP_minus_slash &kp KP_N7       &kp KP_N8  &kp KP_N9  &kp C_AL_CALC 
+  &skq LGUI  &skq LALT      &skq LCTRL  &skq LSHFT     &kp LA(TAB)        &KP_plstr       &kp KP_N4       &kp KP_N5  &kp KP_N6  &kp KP_N0
+  &kp LG(Z)  &kp LA(EQUAL)  &kp LC(N1)  &kp LC(LS(V))  &kp LC(LA(V))      &skq LSHFT      &kp KP_N1       &kp KP_N2  &kp KP_N3  &kp PRCNT
+                            &kp ESC     &kp SPACE      &none              &kp RET         &mt KP_DOT BSPC &kp KP_DOT
             >;
         };
 
         sym {
             display-name = "SYM";
             bindings = <
-  &kp GRAVE  &kp STAR  &kp AMPS  &kp UNDER &kp CARET      &kp PLUS   &kp EQUAL    &kp TILDE  &kp LALT  &kp RGUI
-  &kp LPAR   &kp LBKT  &kp RBKT  &kp RPAR  &kp COLON      &kp AT     &sk RSHFT    &sk RCTRL  &sk LALT   &sk RGUI
+  &kp GRAVE  &kp STAR  &kp AMPS  &kp UNDER &kp CARET      &kp EXCL   &kp EQUAL    &kp MINUS  &kp GRAVE  &kp RGUI
+  &kp LPAR   &kp LBKT  &kp RBKT  &kp RPAR  &kp COLON      &kp QMARK  &sk RSHFT    &sk RCTRL  &sk LALT   &sk RGUI
   &kp LBRC   &kp LT    &kp GT    &kp RBRC  &kp PERCENT    &kp HASH   &kp BSLH     &kp PIPE   &kp SLASH  &kp LG(L)
-                       &kp ESC   &kp QMARK &kp EXCL       &none      &kp LC(BSPC) &kp LC(DEL)
+                       &kp ESC   &kp SPACE &kp QMARK      &kp ENTER  &kp LC(BSPC) &kp LC(DEL)
             >;
         };
 
