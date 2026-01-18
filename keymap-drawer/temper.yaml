@@ -80,7 +80,7 @@ layers:
   - Ctrl
   - Shift
   - Alt+Sft+↹
-  - '&KP_minus_slash'
+  - {t: ➖, s: ➗}
   - KP 7
   - KP 8
   - KP 9
