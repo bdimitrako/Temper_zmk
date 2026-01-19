@@ -214,7 +214,7 @@
             display-name = "SYM";
             bindings = <
   &kp GRAVE  &kp STAR  &kp AMPS  &kp UNDER &kp CARET      &kp EXCL   &kp EQUAL    &kp MINUS  &kp GRAVE  &kp RGUI
-  &kp LPAR   &kp LBKT  &kp RBKT  &kp RPAR  &kp COLON      &kp QMARK  &sk RSHFT    &sk RCTRL  &sk LALT   &sk RGUI
+  &kp LPAR   &kp LBKT  &kp RBKT  &kp RPAR  &kp COLON      &kp AT     &sk RSHFT    &sk RCTRL  &sk LALT   &sk RGUI
   &kp LBRC   &kp LT    &kp GT    &kp RBRC  &kp PERCENT    &kp HASH   &kp BSLH     &kp PIPE   &kp SLASH  &kp LG(L)
                        &kp ESC   &kp SPACE &kp QMARK      &kp ENTER  &kp LC(BSPC) &kp LC(DEL)
             >;
