@@ -127,7 +127,7 @@ layers:
   - {t: ']', s: '}'}
   - )
   - ':'
-  - '?'
+  - '@'
   - {t: Shift, h: sticky}
   - {t: Ctrl, h: sticky}
   - {t: Alt, h: sticky}
