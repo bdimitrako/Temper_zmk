@@ -17,10 +17,11 @@
 #include <dt-bindings/zmk/pointing.h>
 
 &mmv_input_listener {
-            precisionnav { layers = <1>; input-processors = <&zip_xy_scaler 1 3>; };
-            precisionnum { layers = <2>; input-processors = <&zip_xy_scaler 1 2>; };
-            fastsym      { layers = <3>; input-processors = <&zip_xy_scaler 3 1>; };
-        };
+    precisionnav { layers = <1>; input-processors = <&zip_xy_scaler 1 3>; };
+    precisionnum { layers = <2>; input-processors = <&zip_xy_scaler 1 2>; };
+    fastsym      { layers = <3>; input-processors = <&zip_xy_scaler 3 1>; };
+};
+
 / {
     behaviors {
         mmv {
@@ -33,7 +34,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MO_TOG";
             bindings = <&mo>, <&tog>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <180>;
@@ -47,15 +47,16 @@
             quick-release;
             ignore-modifiers;
         };
+
         sk_mo: sk_mo {
             compatible = "zmk,behavior-hold-tap";
             label = "SK_MO";
             bindings = <&mo>, <&skq>;
-
             #binding-cells = <2>;
-            tapping-term-ms = <200>; // 100, 150
+            tapping-term-ms = <200>; 
             flavor = "tap-preferred";
         };
+
         tt: tog_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -66,6 +67,15 @@
             bindings = <&mo>, <&tog>;
             display-name = "Tog-Tap";
         };
+
+        td_lt: tap_dance_layer_tap {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            // Removed reference to layer 7
+            bindings = <&tt 3 3>, <&kp ENTER>; 
+        };
+
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -75,30 +85,35 @@
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap";
         };
+
         lpb: left_paren_brace {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp LPAR>, <&kp LBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         }; 
+
         rpb: right_paren_brace {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp RPAR>, <&kp RBRC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };        
+
         plstr: plus_star {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp PLUS>, <&kp STAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         mnslh: minus_slash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp MINUS>, <&kp FSLH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
         KP_plstr: KP_plus_star {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -112,54 +127,54 @@
             bindings = <&kp KP_MINUS>, <&kp KP_DIVIDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    
     };
-    combos {
-    compatible = "zmk,combos";
-    
-    // Layer toggles
-    tognav   { bindings = <&tog 1>; key-positions = <8 18>;  require-prior-idle-ms = <150>; layers = <0 1>; };
-    tognum   { bindings = <&tog 2>; key-positions = <15 16>; require-prior-idle-ms = <150>; layers = <0 2>; };
-    togsym   { bindings = <&tog 3>; key-positions = <23 26>; require-prior-idle-ms = <150>; layers = <0 3>; };
-    togmouse { bindings = <&tog 4>; key-positions = <1 11>;  require-prior-idle-ms = <150>; layers = <0 4>; };
 
-    togqty   { bindings = <&tog 7>; key-positions = <13 16>; require-prior-idle-ms = <150>; layers = <0 7>; };
-    tobase   { bindings = <&to 0>;  key-positions = <32 33>; require-prior-idle-ms = <150>; layers = <1 2 3 4 5 6>; };
-    
-    // Modifiers
-    altcombo  { bindings = <&kp LALT>;  key-positions = <21 22>; require-prior-idle-ms = <150>; layers = <0>; };
-    ctrlcombo { bindings = <&kp LCTRL>; key-positions = <27 28>; require-prior-idle-ms = <150>; layers = <0>; };
-    
-    // Special functions
-    langswitchcombo { bindings = <&kp LG(SPACE)>; key-positions = <12 13>; require-prior-idle-ms = <150>; layers = <0>; };
-    capslockcombo   { bindings = <&kp CAPS>;      key-positions = <22 23>; require-prior-idle-ms = <150>; layers = <0>; };
-    capswordcombo   { bindings = <&caps_word>;    key-positions = <3 6>;   require-prior-idle-ms = <150>; layers = <0>; };
-    tabcombo        { bindings = <&kp TAB>;       key-positions = <16 17>; require-prior-idle-ms = <150>; layers = <0>; };
-    
-    // Left hand symbols
-    bslashcombo   { bindings = <&kp BSLH>;         key-positions = <10 11>; require-prior-idle-ms = <150>; layers = <0>; };
-    lftbrcktcombo { bindings = <&kp LEFT_BRACKET>; key-positions = <11 12>; require-prior-idle-ms = <150>; layers = <0>; };
-    lftbrccombo   { bindings = <&kp LEFT_BRACE>;   key-positions = <2 12>;  require-prior-idle-ms = <150>; layers = <0>; };
-    
-    // Right hand symbols
-    rgtbrcktcombo { bindings = <&kp RIGHT_BRACKET>; key-positions = <17 18>; require-prior-idle-ms = <150>; layers = <0>; };
-    fslashcombo   { bindings = <&kp SLASH>;         key-positions = <18 19>; require-prior-idle-ms = <150>; layers = <0>; };
-    rgtbrccombo   { bindings = <&kp RIGHT_BRACE>;   key-positions = <7 17>;  require-prior-idle-ms = <150>; layers = <0>; };
-    
-    // Top row symbols
-    lftparencombo { bindings = <&kp LEFT_PARENTHESIS>;  key-positions = <2 3>; require-prior-idle-ms = <150>; layers = <0>; };
-    rgtparencombo { bindings = <&kp RIGHT_PARENTHESIS>; key-positions = <6 7>; require-prior-idle-ms = <150>; layers = <0>; };
-    pipecombo     { bindings = <&kp PIPE>;              key-positions = <1 2>; require-prior-idle-ms = <150>; layers = <0>; };
-    equalcombo    { bindings = <&kp EQUAL>;             key-positions = <7 8>; require-prior-idle-ms = <150>; layers = <0>; };
-    
-    // Bottom row
-    undercombo { bindings = <&kp UNDER>; key-positions = <25 26>; require-prior-idle-ms = <150>; layers = <0>; };
-    minuscombo { bindings = <&kp MINUS>; key-positions = <26 27>; require-prior-idle-ms = <150>; layers = <0>; };
-    
-    // Layer 2 specific Num Layer
-    combo_space   { bindings = <&kp SPACE>; key-positions = <26 27>; require-prior-idle-ms = <150>; layers = <2>; };
-    combo_decimal { bindings = <&kp DOT>;   key-positions = <27 28>; require-prior-idle-ms = <150>; layers = <2>; };
-};
+    combos {
+        compatible = "zmk,combos";
+        
+        // Layer toggles
+        tognav   { bindings = <&tog 1>; key-positions = <8 18>;  require-prior-idle-ms = <150>; layers = <0 1>; };
+        tognum   { bindings = <&tog 2>; key-positions = <15 16>; require-prior-idle-ms = <150>; layers = <0 2>; };
+        togsym   { bindings = <&tog 3>; key-positions = <23 26>; require-prior-idle-ms = <150>; layers = <0 3>; };
+        togmouse { bindings = <&tog 4>; key-positions = <1  11>; require-prior-idle-ms = <150>; layers = <0 4>; };
+
+        // Removed togqty (layer 7)
+        tobase   { bindings = <&to 0>;  key-positions = <32 33>; require-prior-idle-ms = <150>; layers = <1 2 3 4 5 6>; };
+        
+        // Modifiers
+        altcombo  { bindings = <&kp LALT>;  key-positions = <21 22>; require-prior-idle-ms = <150>; layers = <0>; };
+        ctrlcombo { bindings = <&kp LCTRL>; key-positions = <27 28>; require-prior-idle-ms = <150>; layers = <0>; };
+        
+        // Special functions
+        langswitchcombo { bindings = <&kp LG(SPACE)>; key-positions = <12 13>; require-prior-idle-ms = <150>; layers = <0>; };
+        capslockcombo   { bindings = <&kp CAPS>;      key-positions = <22 23>; require-prior-idle-ms = <150>; layers = <0>; };
+        capswordcombo   { bindings = <&caps_word>;    key-positions = <3 6>;   require-prior-idle-ms = <150>; layers = <0>; };
+        tabcombo        { bindings = <&kp TAB>;       key-positions = <16 17>; require-prior-idle-ms = <150>; layers = <0>; };
+        
+        // Left hand symbols
+        bslashcombo   { bindings = <&kp BSLH>;          key-positions = <10 11>; require-prior-idle-ms = <150>; layers = <0>; };
+        lftbrcktcombo { bindings = <&kp LEFT_BRACKET>;  key-positions = <11 12>; require-prior-idle-ms = <150>; layers = <0>; };
+        lftbrccombo   { bindings = <&kp LEFT_BRACE>;    key-positions = <2  12>;  require-prior-idle-ms = <150>; layers = <0>; };
+        
+        // Right hand symbols
+        rgtbrcktcombo { bindings = <&kp RIGHT_BRACKET>; key-positions = <17 18>; require-prior-idle-ms = <150>; layers = <0>; };
+        fslashcombo   { bindings = <&kp SLASH>;         key-positions = <18 19>; require-prior-idle-ms = <150>; layers = <0>; };
+        rgtbrccombo   { bindings = <&kp RIGHT_BRACE>;   key-positions = <7  17>;  require-prior-idle-ms = <150>; layers = <0>; };
+        
+        // Top row symbols
+        lftparencombo { bindings = <&kp LEFT_PARENTHESIS>;  key-positions = <2 3>; require-prior-idle-ms = <150>; layers = <0>; };
+        rgtparencombo { bindings = <&kp RIGHT_PARENTHESIS>; key-positions = <6 7>; require-prior-idle-ms = <150>; layers = <0>; };
+        pipecombo     { bindings = <&kp PIPE>;              key-positions = <1 2>; require-prior-idle-ms = <150>; layers = <0>; };
+        equalcombo    { bindings = <&kp EQUAL>;             key-positions = <7 8>; require-prior-idle-ms = <150>; layers = <0>; };
+        
+        // Bottom row
+        undercombo { bindings = <&kp UNDER>; key-positions = <25 26>; require-prior-idle-ms = <150>; layers = <0>; };
+        minuscombo { bindings = <&kp MINUS>; key-positions = <26 27>; require-prior-idle-ms = <150>; layers = <0>; };
+        
+        // Layer 2 specific Num Layer
+        combo_space   { bindings = <&kp SPACE>; key-positions = <26 27>; require-prior-idle-ms = <150>; layers = <2>; };
+        combo_decimal { bindings = <&kp DOT>;   key-positions = <27 28>; require-prior-idle-ms = <150>; layers = <2>; };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -167,10 +182,10 @@
         base {
             display-name = "Base";
             bindings = <
-  &kp Q  &kp W  &kp F      &kp P       &kp B           &kp J     &kp L      &kp U     &kp Y   &kp SQT
-  &kp A  &kp R  &kp S      &kp T       &kp G           &kp M     &kp N      &kp E     &kp I   &kp O
-  &kp Z  &kp X  &kp C      &kp D       &kp V           &kp K     &kp H      &kp COMMA &kp DOT &kp SEMI
-                &lt 6 ESC  &lt 1 SPACE &sk_mo 2 LSHFT  &lt 3 RET &lt 4 BSPC &lt 5 DEL
+  &kp Q  &kp W  &kp F       &kp P       &kp B           &kp J     &kp L      &kp U     &kp Y   &kp SQT
+  &kp A  &kp R  &kp S       &kp T       &kp G           &kp M     &kp N      &kp E     &kp I   &kp O
+  &kp Z  &kp X  &kp C       &kp D       &kp V           &kp K     &kp H      &kp COMMA &kp DOT &kp SEMI
+                &lt 6 ESC   &lt 1 SPACE &sk_mo 2 LSHFT  &lt 3 RET &lt 4 BSPC &lt 5 DEL
             >;
         };
 
@@ -180,7 +195,7 @@
   &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT  &kp LC(LS(TAB))   &kp LA(LS(TAB)) &kp HOME      &kp UP        &kp END       &kp PG_UP
   &skq LGUI  &skq LALT &skq LCTRL &skq LSHFT &kp LC(TAB)       &kp LA(TAB)     &kp LEFT      &kp DOWN      &kp RIGHT     &kp PG_DN
   &kp LC(Z)  &kp LC(X) &kp LC(C)  &kp LC(V)  &kp LC(Y)         &kp INS         &kp LS(SPACE) &kp LC(SPACE) &kp LA(SPACE) &kp K_APP 
-                       &kp ESC    &kp SPACE  &kp LA(EQUAL)     &kp RET         &kp LC(BSPC)  &kp LC(DEL)
+                        &kp ESC    &kp SPACE  &kp LA(EQUAL)     &kp RET         &kp LC(BSPC)  &kp LC(DEL)
             >;
         };
 
@@ -190,7 +205,7 @@
   &kp LGUI   &kp LALT       &kp LCTRL   &kp LSHFT      &kp LA(LS(TAB))    &KP_plstr  &kp KP_N7 &kp KP_N8  &kp KP_N9  &mt PERCENT C_AL_CALC 
   &skq LGUI  &skq LALT      &skq LCTRL  &skq LSHFT     &kp LA(TAB)        &KP_mnslh  &kp KP_N4 &kp KP_N5  &kp KP_N6  &kp KP_N0
   &kp LG(Z)  &kp LA(EQUAL)  &kp LC(N1)  &kp LC(LS(V))  &kp LC(LA(V))      &skq LSHFT &kp KP_N1 &kp KP_N2  &kp KP_N3  &kp KP_NLCK
-                            &kp ESC     &kp SPACE      &none              &kp RET    &kp BSPC  &kp KP_DOT
+                            &kp ESC     &kp SPACE      &none              &kp RET    &kp BSPC   &kp KP_DOT
             >;
         };
 
@@ -200,7 +215,8 @@
   &kp EXCL &kp AT   &kp HASH  &kp DLLR  &kp PRCNT &kp RPAR &kp LPAR &kp STAR &kp AMPS &kp CARET
   &kp N1   &kp N2   &kp N3    &kp N4    &kp N5    &kp N0   &kp N9   &kp N8   &kp N7   &kp N6
   &sk LGUI &sk LALT &sk LCTRL &sk LSHFT &kp EQUAL &kp RBKT &kp LBKT &kp FSLH &kp BSLH &kp LG(Z)
-                    &kp ESC   &kp SPACE &kp MINUS &kp none &kp BSPC  &kp DEL 
+                    &kp ESC   &kp SPACE &kp MINUS &none    &kp BSPC &kp DEL 
+            >;
         };
 
         mouse {
@@ -219,7 +235,7 @@
   &kp F12  &kp F7  &kp F8     &kp F9      &kp PAUSE_BREAK   &none   &kp RSHFT   &kp RCTRL  &kp LALT  &kp RGUI
   &kp F11  &kp F4  &kp F5     &kp F6      &kp PSCRN         &none   &skq RSHFT  &skq RCTRL &skq LALT &skq RGUI
   &kp F10  &kp F1  &kp F2     &kp F3      &kp SLCK          &none   &none       &none      &kp RALT  &kp LC(LS(ESC))
-                   &kp K_APP  &kp LA(F11) &kp LA(F12)       &kp RET &kp BSPC    &none
+                    &kp K_APP  &kp LA(F11) &kp LA(F12)       &kp RET &kp BSPC    &none
             >;
         };
 
