@@ -66,12 +66,6 @@
             bindings = <&mo>, <&tog>;
             display-name = "Tog-Tap";
         };
-        td_lt: tap_dance_layer_tap {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&tt 3 7>, <&kp ENTER>;
-        };
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -239,4 +233,3 @@
             >;
         };
     };
-};
