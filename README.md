@@ -134,33 +134,29 @@ The **Numbers layer** is structured like a numpad, prioritizing efficiency in nu
 
 The numpad layout follows standard positioning with zero on the home row pinky. Arithmetic operators are arranged in a column for quick calculations. The decimal point is accessible via the `, + .` combo (27-28) within this layer.
 
+### Smart Arithmetic (Mod-Morphs)
+To save space on the Numpad, the following keys behave contextually when used with **Shift**:
+* **Plus/Star:** Taps for `+`, Shifts for `*`.
+* **Minus/Slash:** Taps for `-`, Shifts for `/`.
+
 ### Precision Control in Numbers Layer
+When in the Numbers layer, the mouse pointer operates at **50% speed** ($1:2$ scaling). This is the "Medium Precision" mode, ideal for selecting spreadsheet cells or highlighting specific text strings while entering data.
 
-When in the Numbers layer, the mouse pointer operates at **50% speed** (medium precision), allowing for accurate cursor positioning during data entry or spreadsheet work without needing to switch to the dedicated Mouse layer.
+## Raise Layer (3)
 
-## Symbols Layer
+The **Raise layer** consolidates shifted number row symbols and standard numbers for rapid access during technical writing.
 
-The **Symbols layer** includes frequently used programming and punctuation symbols.
-
-**Left Hand - Symbols:**
-- **Top row:** `` ` ``, `&`, `*`, `^`, `=`
-- **Home row:** `!`, `@`, `#`, `$`, `%`
-- **Bottom row:** `[`, `(`, `)`, `]`, `-`
-
-**Right Hand - Modifiers:**
-- **Top row:** `_`, `Shift`, `Ctrl`, `Alt`, `Win`
-- **Home row:** `Tab`, `Sticky Shift`, `Sticky Ctrl`, `Sticky Alt`, `Sticky Win`
-- **Bottom row:** `{`, `|`, `}`, `Alt Gr`, `Win+L` (lock screen)
+**Left Hand - Symbols & Numbers:**
+- **Top row:** `!`, `@`, `#`, `$`, `%`, `)`, `(`, `*`, `&`, `^`
+- **Home row:** `1`, `2`, `3`, `4`, `5`, `0`, `9`, `8`, `7`, `6`
+- **Bottom row:** `Sticky GUI`, `Sticky Alt`, `Sticky Ctrl`, `Sticky Shift`, `=`, `]`, `[`, `/`, `\`, `Undo`
 
 **Thumb Cluster:**
-- **Left:** `\`, `?`, `/`
-- **Right:** None, `Word Delete (Ctrl+Bspc)`, `Word Delete Forward (Ctrl+Del)`
+- **Left:** `Esc`, `Space`, `-`
+- **Right:** `none`, `Backspace`, `Delete`
 
-The layout follows logical grouping with common programming symbols on the left and modifiers mirrored on the right. Brackets and parentheses are positioned symmetrically for intuitive access.
-
-### Fast Mouse Movement in Symbols Layer
-
-When in the Symbols layer, the mouse pointer operates at **300% speed** (fast movement), enabling quick cursor repositioning across the screen while accessing symbols.
+### Fast Mouse Movement (Raise Layer)
+When the Raise layer is active, the mouse pointer operates at **300% speed** ($3:1$ scaling), allowing for rapid cross-screen travel while maintaining access to symbols.
 
 ## Mouse Layer
 
@@ -184,13 +180,14 @@ The inverted-T movement pattern on the left hand mirrors gaming muscle memory. B
 
 ### Multi-Speed Mouse Control
 
-The mouse system provides **three precision levels** through automatic speed adjustment based on active layer:
+The mouse system utilizes ZMK's `mmv_input_listener` to provide three distinct tracking speeds based on which layer is momentarily held:
 
-- **Navigation Layer active (1)**: **33% speed** - Ultra-precise for detailed work, pixel-perfect positioning
-- **Numbers Layer active (2)**: **50% speed** - Moderate precision for general navigation and data entry
-- **Mouse Layer (4)**: **100% speed** - Full speed (default) for quick movements across screen
-
-**How it works:** The speed automatically adjusts when you momentarily activate another layer while in Mouse layer. For example, holding the Navigation layer trigger with your left thumb while moving the mouse with your left hand provides ultra-precise control. This uses ZMK's `mmv_input_listener` with layer-specific input processors.
+| Active Layer | Scaling Ratio | Use Case |
+| :--- | :--- | :--- |
+| **Nav (1)** | **1:3 (33%)** | **High Precision:** Pixel-perfect UI design or photo editing. |
+| **Num (2)** | **1:2 (50%)** | **Medium Precision:** General navigation and spreadsheet work. |
+| **Mouse (4)** | **1:1 (100%)** | **Default:** Standard desktop navigation. |
+| **Raise (3)** | **3:1 (300%)** | **Fast:** Flicking the cursor across multi-monitor setups. |
 
 ## Function Layer
 
