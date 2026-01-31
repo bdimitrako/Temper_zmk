@@ -33,8 +33,8 @@ layers:
   - {t: ;, s: ':'}
   - {t: Esc, h: BLT}
   - {t: ␣, h: NAV}
-  - {t: Shift, h: QTY}
-  - {t: ⏎, h: SYM}
+  - {t: Shift, h: NUM}
+  - {t: ⏎, h: RSE}
   - {t: ⌫, h: MSE}
   - {t: ⌦, h: FUN}
   NAV:
@@ -107,47 +107,47 @@ layers:
   - Num
   - Esc
   - ␣
-  - ''
+  - {type: held}
   - ⏎
   - ⌫
   - {t: ., s: DEL}
-  SYM:
-  - {t: '`', s: '~'}
+  RSE:
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - )
+  - (
   - '*'
   - '&'
-  - _
   - ^
-  - '!'
-  - {t: '=', s: +}
-  - {t: '-', s: _}
-  - {t: '`', s: '~'}
-  - Win
-  - (
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - )
-  - ':'
-  - '@'
-  - {t: Shift, h: sticky}
-  - {t: Ctrl, h: sticky}
-  - {t: Alt, h: sticky}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '@'}
+  - {t: '3', s: '#'}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '0', s: )}
+  - {t: '9', s: (}
+  - {t: '8', s: '*'}
+  - {t: '7', s: '&'}
+  - {t: '6', s: ^}
   - {t: Win, h: sticky}
-  - '{'
-  - <
-  - '>'
-  - '}'
-  - '%'
-  - '#'
-  - {t: \, s: '|'}
-  - '|'
+  - {t: Alt, h: sticky}
+  - {t: Ctrl, h: sticky}
+  - {t: Shift, h: sticky}
+  - {t: '=', s: +}
+  - {t: ']', s: '}'}
+  - {t: '[', s: '{'}
   - {t: /, s: '?'}
-  - Lock
+  - {t: \, s: '|'}
+  - Gui+Z
   - Esc
   - ␣
-  - '?'
-  - {t: ⏎, type: held}
-  - Ctl+⌫
-  - Ctl+⌦
+  - {t: '-', s: _}
+  - {type: held}
+  - ⌫
+  - ⌦
   MSE:
   - Scroll ↑
   - Scroll ←
@@ -175,7 +175,7 @@ layers:
   - Ctl+T
   - Ctl+Sft+T
   - Snip Text
-  - SYM
+  - RSE
   - NUM
   - NAV
   - Win Close
@@ -259,43 +259,6 @@ layers:
   - ⏯
   - ⏮
   - ⏭
-  QTY:
-  - Gui+Z
-  - {t: Alt+=, s: Alt++}
-  - {t: Ctl+1, s: Ctl+!}
-  - Ctl+Sft+V
-  - Ctl+Alt+V
-  - {t: +, s: '*'}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - {t: \, s: '|'}
-  - {t: '=', s: +}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '@'}
-  - {t: '3', s: '#'}
-  - {t: '4', s: $}
-  - {t: Shift, h: sticky}
-  - {t: '-', s: /}
-  - {t: '9', s: (}
-  - {t: '8', s: '*'}
-  - {t: '7', s: '&'}
-  - {t: '6', s: ^}
-  - {t: Win, h: sticky}
-  - {t: Alt, h: sticky}
-  - {t: Ctrl, h: sticky}
-  - {t: '5', s: '%'}
-  - ↹
-  - _
-  - {t: '0', s: )}
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
-  - {t: ;, s: ':'}
-  - Esc
-  - ␣
-  - {t: '?', type: held}
-  - ⏎
-  - ⌫
-  - ⌦
 combos:
 - p: [8, 18]
   k: {t: NAV, h: toggle}
@@ -306,19 +269,16 @@ combos:
   k: {t: NUM, h: toggle}
   l: [Base, NUM]
 - p: [23, 26]
-  k: {t: SYM, h: toggle}
-  l: [Base, SYM]
+  k: {t: RSE, h: toggle}
+  l: [Base, RSE]
 - p: [1, 11]
   k: {t: MSE, h: toggle}
   l: [Base, MSE]
   a: top
   o: -1.0
-- p: [13, 16]
-  k: {t: QTY, h: toggle}
-  l: [Base, QTY]
 - p: [32, 33]
   k: {t: Base, h: toggle}
-  l: [NAV, NUM, SYM, MSE, FUN, BLT, QTY]
+  l: [NAV, NUM, RSE, MSE, FUN, BLT]
 - p: [21, 22]
   k: Alt
   l: [Base]
