@@ -112,7 +112,7 @@
             bindings = <&kp KP_MINUS>, <&kp KP_DIVIDE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-    };
+    
     };
     combos {
     compatible = "zmk,combos";
@@ -233,3 +233,4 @@
             >;
         };
     };
+};
