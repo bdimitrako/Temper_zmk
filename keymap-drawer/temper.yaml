@@ -283,7 +283,7 @@ combos:
   k: Alt
   l: [Base]
 - p: [27, 28]
-  k: Ctrl
+  k: '?'
   l: [Base]
 - p: [12, 13]
   k: Lang Switch

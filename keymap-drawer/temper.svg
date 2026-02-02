@@ -332,7 +332,7 @@ path.combo { stroke: #7f7f7f; }
 </g>
 <g class="combo combopos-5">
 <rect rx="6" ry="6" x="602" y="130" width="28" height="26" class="combo"/>
-<text x="616" y="144" class="combo tap">Ctrl</text>
+<text x="616" y="144" class="combo tap">?</text>
 </g>
 <g class="combo combopos-6">
 <rect rx="6" ry="6" x="154" y="74" width="28" height="26" class="combo"/>
