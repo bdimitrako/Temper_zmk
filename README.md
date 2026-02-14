@@ -31,7 +31,8 @@ The foundation is **Colemak-DH**, modified for high-speed bilingual typing.
 ### The `sk_mo` Architecture
 The left outer thumb utilizes a sophisticated `sk_mo` (Sticky Key Momentary) behavior. This allows the thumb to act as a **One-Shot Shift** for quick capitalization on tap, while doubling as the **Numbers Layer** trigger on hold.
 
-```cpp
+In behaviors section:
+```c
 sk_mo: sticky_key_momentary {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
@@ -61,14 +62,23 @@ This layout utilizes ZMK's input listener system to create a "Manual Transmissio
 
 ### Scaling Logic Example
 
-```cpp
-// Input listener scaling configuration
-&mmv_input_listener {
-    input-processors = <&zip_xy_scaler 1 3>; // Precision Gear
+Above behaviors section:
+```c
+&msc_input_listener {
+    // Layer 1 (NAV) -> Slow: 1/3 speed
+    scrl_slow { layers = <1>; input-processors = <&zip_scroll_scaler 1 3>; };
+    
+    // Layer 2 (NUM) -> Normal/Mid: 1/2 speed
+    scrl_norm { layers = <2>; input-processors = <&zip_scroll_scaler 1 2>; };
+    
+    // Layer 3 (RSE) -> Fast: 3x speed
+    scrl_fast { layers = <3>; input-processors = <&zip_scroll_scaler 3 1>; };
 };
 
-&msc_input_listener {
-    input-processors = <&zip_scroll_scaler 1 3>; // Precision Scroll
+&mmv_input_listener {
+    precisionnav { layers = <1>; input-processors = <&zip_xy_scaler 1 3>; };
+    precisionnum { layers = <2>; input-processors = <&zip_xy_scaler 1 2>; };
+    fastsym      { layers = <3>; input-processors = <&zip_xy_scaler 3 1>; };
 };
 ```
 ---
@@ -76,15 +86,15 @@ This layout utilizes ZMK's input listener system to create a "Manual Transmissio
 ## 🔗 Combos & Shortcuts
 
 ### Two-Key Combos
-* **Language/System:** `W + F` (Lang Switch), `R + S` (Caps Word), `Z + O` (Caps Lock).
-* **Symbols:** `W + R` / `U + N` (`{ }`), `F + P` / `L + U` (`( )`), `Q + W` (`\`), `C + D` (`_`).
+* **Language/System:** `S + T` (Lang Switch), `P + L` (Caps Word), `C + D` (Caps Lock).
+* **Symbols:** `F + S` / `U + E` (`{ }`), `R + S` / `E + I` (`[ ]`), `F + P` / `L + U` (`( )`), `A + R` / `I + O` (`\ /`), `K + H` (`_`) and others.
 * **Modifiers:** `X + C` (**Alt**), `, + .` (**Control**).
 
 ### Layer Toggle Combos (3-Key)
 For single-handed operation:
-* `Q + A`: **Toggle Mouse Layer**
-* `Y + O`: **Toggle Navigation Layer**
-* `V + K`: **Toggle Numbers Layer**
+* `W + R`: **Toggle Mouse Layer**
+* `Y + I`: **Toggle Navigation Layer**
+* `M + N`: **Toggle Numbers Layer**
 
 ---
 
@@ -114,10 +124,43 @@ To maximize efficiency, the Numbers layer uses **Mod-Morphs** for math operators
 * **Plus / Star**: Tapping produces `+`, Shifting produces `*`.
 * **Minus / Slash**: Tapping produces `-`, Shifting produces `/`.
 
+In behaviors section:
+```c
+// main keyboard's config
+plstr: plus_star {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp PLUS>, <&kp STAR>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+mnslh: minus_slash {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp MINUS>, <&kp FSLH>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// keypad's alternate
+KP_plstr: KP_plus_star {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp KP_PLUS>, <&kp KP_MULTIPLY>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+KP_mnslh: KP_minus_slash {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp KP_MINUS>, <&kp KP_DIVIDE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+```
+
 ### Critical Combos
 Combos provide essential symbols without requiring full layer transitions.
-* **Language Switch**: `W + F` for rapid toggle between Greek/English.
-* **Braces `{ }`**: Vertical combos on `W + R` (Left) and `U + N` (Right).
+* **Language Switch**: `S + T` for rapid toggle between Greek/English.
+* **Braces `{ }`**: Vertical combos on `F + S` (Left) and `U + E` (Right).
 * **Contextual Decimal**: Within the **Num Layer**, the `, + .` combo produces a **Decimal Point** (`.`).
 
 ---
@@ -137,5 +180,6 @@ Combos provide essential symbols without requiring full layer transitions.
 | ![04](photos/IMG_20250310_193310.jpg) | ![05](photos/IMG_20250310_193332.jpg) | ![06](photos/IMG_20250310_193345.jpg) |
 | ![07](photos/IMG_20250310_193424.jpg) | ![08](photos/IMG_20250310_193434.jpg) | ![09](photos/MVIMG_20251216_092944.jpg) |
 | ![10](photos/MVIMG_20251216_092920.jpg) | ![11](photos/IMG_20250705_132208.jpg) | ![12](photos/IMG_20260214_111652.jpg) |
+
 
 </details>
