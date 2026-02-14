@@ -1,248 +1,134 @@
+# ⌨️ Temper ZMK: The "Precision Gear" Layout
+
 ![Diagram of config](keymap-drawer/temper.svg)
 
-# Keyboard Layout Documentation
+A high-performance **36-key split layout** for the [Temper keyboard](https://github.com/clyteduo/temper). This configuration merges **Colemak-DH** efficiency with specialized **Greek-bilingual** support and a unique "Manual Gearbox" system for mouse control.
 
-## Table of Contents
-1. [Base Layout](#base-layout)
+---
+
+## 📑 Table of Contents
+1. [Base Layout & Philosophy](#base-layout--philosophy)
 2. [Thumb Clusters](#thumb-clusters)
-   - [On Tap](#on-tap)
-   - [On Hold](#on-hold)
 3. [Combos](#combos)
-   - [Two-Key Combos](#two-key-combos)
-   - [Layer Toggle Combos](#layer-toggle-combos)
-4. [Navigation Layer](#navigation-layer)
-5. [Numbers Layer](#numbers-layer)
-6. [Symbols Layer](#symbols-layer)
-7. [Mouse Layer](#mouse-layer)
-8. [Function Layer](#function-layer)
-9. [Bluetooth Media Layer](#bluetooth-media-layer)
-10. [Photos](#photos)
+4. [The Mouse Gear System](#the-mouse-gear-system)
+5. [Layer Reference](#layer-reference)
+6. [Photos](#photos)
 
-## Base Layout  
-The foundation is **Colemak-DH**, with additional modifications on the right hand.  
-- Instead of `/` on the bottom-row pinky key, there is `;`, which in Greek is used for accenting letters (e.g., ά, έ, ί, ό, ή, ύ, ώ) and shifted accents like ϊ.  
-- Instead of `;` on the top-row pinky key, there is `'`.  
-- This layout **does not** include home-row mods, as it is designed for speed, minimizing accidental modifier activations while typing or switching between Greek and English—even within the same sentence.  
+---
 
-## Thumb Clusters  
+## Base Layout & Philosophy
+The foundation is **Colemak-DH**, modified for high-speed bilingual typing.
 
-### On Tap  
-**Left:** `Esc`, `Space`, `Shift`  
-**Right:** `Enter`, `Backspace`, `Delete`  
+* **Greek Optimization:** The bottom-row pinky key is mapped to `;`. In Greek software layouts, this provides the **accent (΄)** for vowels (ά, έ, ί, etc.). The `'` key has been moved to the top-row pinky.
+* **No Home-Row Mods (HRM):** This layout avoids HRM to eliminate the latency and accidental activations that occur during high-speed typing or rapid language switching.
+* **Sticky Keys:** Instead of holding modifiers, this layout heavily utilizes **Sticky Keys** on the thumbs for one-shot capitalization and modifier combinations.
 
-- **Neutral thumb positions** (easiest to reach) are assigned to **Space** and **Backspace**, as they are the most frequently used.  
-- **Outer thumb positions** (faster but less precise) are used for **Shift** (using sticky key behavior with quick-release) and **Enter** (for quick new-line creation).  
-- **Inner thumb positions** (harder to reach) are used for **Escape** and **Delete**, as they are less common and should not be hit accidentally.  
-- The layout is strongly influenced by **Miryoku**, with **Shift** implemented as a sticky key with quick-release for one-shot capitalization and modifier combos.
+---
 
-### On Hold  
-**Left:** `Bluetooth (Layer 6)`, `Navigation (Layer 1)`, `Numbers (Layer 2)` with special `sk_mo` behavior  
-**Right:** `Symbols (Layer 3)`, `Mouse (Layer 4)`, `Function (Layer 5)`  
+## Thumb Clusters
 
-- Inspired by **Miryoku**, where one thumb activates a layer while the other hand uses that layer's main keys and combos.  
-- Standard Miryoku assigns `Media`, `Navigation`, `Mouse` on the left and `Symbols`, `Numbers`, `Function` on the right.  
-- However, I swapped **Numbers** and **Mouse** because I found it unnatural to type numbers with my left hand.  
-- Since the **Numbers layer** is used frequently, it shouldn't be placed in the inner palm position. Instead, it occupies the **left outer palm key**, with a special `sk_mo` (sticky-key momentary) behavior that allows:
-  - **Tap**: Activates sticky shift for capitalizing the next character
-  - **Hold**: Activates the Numbers layer
-- **Navigation** remains in the **neutral thumb position** for frequent access.  
-- The **Mouse trigger** occupies the **right-hand neutral thumb position**, as it mirrors the **inverted-T movement pattern** I use in games with my left hand.
+### On Tap (The "Basics")
+| Position | Left Hand | Right Hand |
+| :--- | :--- | :--- |
+| **Inner** (Tucked) | `Escape` | `Delete` |
+| **Neutral** (Home) | `Space` | `Backspace` |
+| **Outer** (Wide) | `Shift` (Sticky) | `Enter` |
+
+* **Neutral positions** are assigned to high-frequency keys (`Space`/`Backspace`).
+* **Inner positions** house "destructive" or less common keys (`Esc`/`Del`) to prevent accidental presses.
+
+### On Hold (The "Engine")
+This layout follows a modified **Miryoku** logic. While Miryoku typically places Numbers on the right and Mouse on the left, **this layout swaps them** to allow for a more natural right-handed "Numpad" feel.
+
+| Position | Left Hand Hold | Right Hand Hold |
+| :--- | :--- | :--- |
+| **Inner** | **Layer 6:** Bluetooth/Media | **Layer 5:** Function (F1-F12) |
+| **Neutral** | **Layer 1:** Navigation | **Layer 4:** Mouse |
+| **Outer** | **Layer 2:** Numbers (`sk_mo`) | **Layer 3:** Raise (Symbols) |
+
+> **Note on `sk_mo`:** The Left Outer thumb is a dual-purpose key. **Tap** for Sticky Shift, **Hold** for the Numbers layer.
+
+---
 
 ## Combos
 
-### Two-Key Combos
+### Two-Key Combos (Horizontal)
+* `W + F`: **Language Switch** (`Win + Space`)
+* `R + S`: **Caps Word** (Contextual - only in Nav)
+* `H + ,`: **Minus** (`-`)
+* `, + .`: **Control** (Acting as Decimal Point in Num Layer)
+* `L + N`: **Tab**
+* `X + C`: **Alt**
+* `C + D`: **Underscore** (`_`)
 
-**Horizontal Combos (Adjacent Keys):**
-- `W + F` (12-13): **Language Switch** (`Win+Space`) - Quick switch between Greek and English
-- `R + S` (12-13 in nav context): **Caps Word** - Auto-capitalizes until space/punctuation
-- `H + ,` (26-27): **Minus** (`-`)
-- `, + .` (27-28): **Ctrl** - Quick access to Control modifier
-- `, + .` (27-28 in Numbers Layer): **Decimal Point** (`.`)
-- `L + N` (16-17): **Tab** - Easily accessible Tab key
-- `X + C` (21-22): **Alt** - Quick access to Alt modifier
-- `C + D` (22-23): **Underscore** (`_`)
+### Two-Key Combos (Vertical & Symbols)
+* **Braces `{ }`**: `W + R` (Left) / `U + N` (Right)
+* **Brackets `[ ]`**: `W + F` (Left) / `N + E` (Right)
+* **Parentheses `( )`**: `F + P` (Left) / `L + U` (Right)
+* **Misc**: `Q + W` (**\**), `W + F` (**[**), `E + I` (**/**), `W + F` (**|**), `U + Y` (**=**)
+* **System**: `Z + O` (**Caps Lock**)
 
-**Vertical Combos (Stacked Keys):**
-- `W + R` (2-12): **Left Brace** (`{`)
-- `U + N` (7-17): **Right Brace** (`}`)
+### Layer Toggle Combos (3-Key)
+Used for single-handed operation over extended periods:
+* `Q + A`: **Toggle Mouse Layer**
+* `Y + O`: **Toggle Navigation Layer**
+* `V + K`: **Toggle Numbers Layer**
 
-**Symbol Combos - Left Side:**
-- `Q + W` (10-11): **Backslash** (`\`)
-- `W + F` (11-12): **Left Bracket** (`[`)
+---
 
-**Symbol Combos - Right Side:**
-- `L + N` (16-17): **Tab** (also accessible as horizontal combo)
-- `N + E` (17-18): **Right Bracket** (`]`)
-- `E + I` (18-19): **Slash** (`/`)
-
-**Symbol Combos - Top Row:**
-- `F + P` (2-3): **Left Parenthesis** (`(`)
-- `L + U` (6-7): **Right Parenthesis** (`)`)
-- `W + F` (1-2): **Pipe** (`|`)
-- `U + Y` (7-8): **Equal** (`=`)
-
-**Special Combos:**
-- `Z + O` (24-31): **Caps Lock** - Toggle caps lock
-
-### Layer Toggle Combos
-
-These **three-key combos** allow persistent layer activation, useful for extended work in a specific mode:
-
-- `Q + A` (10-20): **Toggle Mouse Layer** - Works from Base (0) or Mouse (4) layer
-- `Y + O` (19-29): **Toggle Navigation Layer** - Works from Base (0) or Navigation (1) layer
-- `V + K` (25-34): **Toggle Numbers Layer** - Works from Base (0) or Numbers (2) layer
-
-These toggles enable **single-handed operation** when you need to stay in a layer for extended periods (e.g., using mouse while holding coffee, or doing lots of numeric entry).
-
-## Navigation Layer
-
-The **Navigation layer** provides efficient text and file navigation without moving hands from home position.
-
-**Left Hand - Modifiers:**
-- **Top row:** `Win`, `Alt`, `Ctrl`, `Shift`, None
-- **Home row:** `Sticky Win`, `Sticky Alt`, `Sticky Ctrl`, `Sticky Shift`, `Tab`
-- **Bottom row:** `Undo (Ctrl+Z)`, `Cut (Ctrl+X)`, `Copy (Ctrl+C)`, `Paste (Ctrl+V)`, `Redo (Ctrl+Y)`
-
-**Right Hand - Navigation:**
-- **Top row:** `Insert`, `Home`, `Up`, `End`, `Page Up`
-- **Home row:** `Caps Lock`, `Left`, `Down`, `Right`, `Page Down`
-- **Bottom row:** None, `Context Menu`, `Spotlight (Alt+Space)`, None, None
-
-**Thumb Cluster:**
-- **Left:** `Esc`, `Space`, `Enter`
-- **Right:** `Language Switch (Win+Space)`, `Word Delete (Ctrl+Bspc)`, `Word Delete Forward (Ctrl+Del)`
-
-The left hand provides all standard modifiers in both held and sticky variants, while the right hand offers a complete inverted-T arrow cluster plus standard navigation keys. The bottom-left row includes the most common clipboard operations in an easy-to-reach sequence.
-
-## Numbers Layer
-
-The **Numbers layer** is structured like a numpad, prioritizing efficiency in numeric entry.
-
-**Right Hand - Numpad:**
-- **Top row:** `=`, `7`, `8`, `9`, `Calculator App`
-- **Home row:** `*`, `4`, `5`, `6`, `0`
-- **Bottom row:** `/`, `1`, `2`, `3`, `%`
-
-**Left Hand - Modifiers & Shortcuts:**
-- **Top row:** `Win`, `Alt`, `Ctrl`, `Shift`, `Alt+Shift+Tab` (reverse window switch)
-- **Home row:** `Sticky Win`, `Sticky Alt`, `Sticky Ctrl`, `Sticky Shift`, `Alt+Tab` (window switch)
-- **Bottom row:** `Win+Z`, `Alt+=`, `Ctrl+1`, `Ctrl+Shift+V`, `Ctrl+Alt+V`
-
-**Thumb Cluster:**
-- **Left:** `Esc`, `Space`, None
-- **Right:** `+`, `-`, `Backspace`
-
-The numpad layout follows standard positioning with zero on the home row pinky. Arithmetic operators are arranged in a column for quick calculations. The decimal point is accessible via the `, + .` combo (27-28) within this layer.
-
-### Smart Arithmetic (Mod-Morphs)
-To save space on the Numpad, the following keys behave contextually when used with **Shift**:
-* **Plus/Star:** Taps for `+`, Shifts for `*`.
-* **Minus/Slash:** Taps for `-`, Shifts for `/`.
-
-### Precision Control in Numbers Layer
-When in the Numbers layer, the mouse pointer operates at **50% speed** ($1:2$ scaling). This is the "Medium Precision" mode, ideal for selecting spreadsheet cells or highlighting specific text strings while entering data.
-
-## Raise Layer (3)
-
-The **Raise layer** consolidates shifted number row symbols and standard numbers for rapid access during technical writing.
-
-**Left Hand - Symbols & Numbers:**
-- **Top row:** `!`, `@`, `#`, `$`, `%`, `)`, `(`, `*`, `&`, `^`
-- **Home row:** `1`, `2`, `3`, `4`, `5`, `0`, `9`, `8`, `7`, `6`
-- **Bottom row:** `Sticky GUI`, `Sticky Alt`, `Sticky Ctrl`, `Sticky Shift`, `=`, `]`, `[`, `/`, `\`, `Undo`
-
-**Thumb Cluster:**
-- **Left:** `Esc`, `Space`, `-`
-- **Right:** `none`, `Backspace`, `Delete`
-
-### Fast Mouse Movement (Raise Layer)
-When the Raise layer is active, the mouse pointer operates at **300% speed** ($3:1$ scaling), allowing for rapid cross-screen travel while maintaining access to symbols.
-
-## Mouse Layer
-
-The **Mouse layer** provides complete mouse control without leaving the keyboard.
-
-**Left Hand - Mouse Control:**
-- **Top row:** `Scroll Up`, `Scroll Left`, `Move Up`, `Scroll Right`, `Mouse Button 4`
-- **Home row:** `Scroll Down`, `Move Left`, `Move Down`, `Move Right`, `Mouse Button 5`
-- **Bottom row:** `Close Tab (Ctrl+W)`, `Focus Address Bar (Ctrl+L)`, `Refresh (Ctrl+R)`, `New Tab (Ctrl+T)`, `Reopen Tab (Ctrl+Shift+T)`
-
-**Right Hand - Modifiers & Shortcuts:**
-- **Top row:** `Win+Shift+D`, `Shift`, `Ctrl`, `Alt`, `Win`
-- **Home row:** `Win+Shift+S` (screenshot), `Sticky Shift`, `Sticky Ctrl`, `Sticky Alt`, `Sticky Win`
-- **Bottom row:** `Win+Shift+T`, `Symbols Layer (mo)`, `Numbers Layer (mo)`, `Navigation Layer (mo)`, `Close Window (Alt+F4)`
-
-**Thumb Cluster:**
-- **Left:** `Middle Click`, `Left Click`, `Right Click`
-- **Right:** `Enter`, `Backspace`, `Delete`
-
-The inverted-T movement pattern on the left hand mirrors gaming muscle memory. Browser efficiency shortcuts are positioned for single-handed operation. The right hand provides access to other layers via momentary activation, enabling combined functionality (e.g., precise mouse movement at Navigation layer speed while staying in Mouse layer).
-
-### Multi-Speed Mouse Control
-
-The mouse system utilizes ZMK's `mmv_input_listener` to provide three distinct tracking speeds based on which layer is momentarily held:
+## The Mouse Gear System
+Using ZMK's `mmv_input_listener`, this layout treats mouse sensitivity like a manual transmission. While in the **Mouse Layer (4)**, hold the following triggers to scale speed:
 
 | Active Layer | Scaling Ratio | Use Case |
 | :--- | :--- | :--- |
-| **Nav (1)** | **1:3 (33%)** | **High Precision:** Pixel-perfect UI design or photo editing. |
-| **Num (2)** | **1:2 (50%)** | **Medium Precision:** General navigation and spreadsheet work. |
+| **Nav (1)** | **1:3 (33%)** | **Slow:** High-precision UI design or photo editing. |
+| **Num (2)** | **1:2 (50%)** | **Mid:** General navigation and spreadsheet work. |
 | **Mouse (4)** | **1:1 (100%)** | **Default:** Standard desktop navigation. |
-| **Raise (3)** | **3:1 (300%)** | **Fast:** Flicking the cursor across multi-monitor setups. |
+| **Raise (3)** | **3:1 (300%)** | **Fast:** Rapid travel across multi-monitor setups. |
 
-## Function Layer
+---
 
-The **Function layer** provides F-keys and system controls.
+## Layer Reference
 
-**Left Hand - Function Keys:**
-- **Top row:** `F12`, `F7`, `F8`, `F9`, `Pause Break`
-- **Home row:** `F11`, `F4`, `F5`, `F6`, `Print Screen`
-- **Bottom row:** `F10`, `F1`, `F2`, `F3`, `Scroll Lock`
+### 1. Navigation Layer
+An inverted-T arrow cluster on the right hand. The left hand provides a "Clipboard Row": **Undo (Ctrl+Z), Cut (Ctrl+X), Copy (Ctrl+C), Paste (Ctrl+V), Redo (Ctrl+Y).**
 
-**Right Hand - Modifiers:**
-- **Top row:** None, `Shift`, `Ctrl`, `Alt`, `Win`
-- **Home row:** None, `Sticky Shift`, `Sticky Ctrl`, `Sticky Alt`, `Sticky Win`
-- **Bottom row:** None, None, None, `Alt Gr`, `Task Manager (Ctrl+Shift+Esc)`
+### 2. Numbers Layer
+A 10-key Numpad on the right hand. 
+* **Smart Arithmetic:** `+` and `-` keys are **Mod-Morphs**. Tapping produces Plus/Minus; Shifting produces Multiply/Divide.
+* **Shortcuts:** Includes `Alt+Tab` and `Alt+Shift+Tab` on the home row for window management.
 
-**Thumb Cluster:**
-- **Left:** `Context Menu`, `Alt+F11`, `Alt+F12`
-- **Right:** `Enter`, `Backspace`, None
+### 3. Raise (Symbols) Layer
+Shifted number row symbols (!@#$%) on the left hand. This layer also triggers the **Fast Mouse** gear.
 
-Function keys are arranged in a logical numpad-style layout with F1-F3 on bottom, F4-F6 on home, F7-F9 on top, and F10-F12 in the leftmost column. System keys like Print Screen and Scroll Lock are positioned on the right side of the left hand.
+### 4. Mouse Layer
+Left hand provides movement and scrolling in an inverted-T pattern. Bottom row contains browser shortcuts: `Close Tab`, `Focus Address Bar`, `Refresh`, `New Tab`, and `Reopen Tab`.
 
-## Bluetooth Media Layer
+### 5. Function Layer
+F1-F12 keys arranged in a numpad-style grid for easy memorization. Includes `Print Screen`, `Scroll Lock`, and `Task Manager`.
 
-The **Bluetooth & Media layer** handles device switching, media controls, and system utilities.
+### 6. Bluetooth & Media Layer
+Handles 5 Bluetooth profiles, `BT Clear`, and media playback.
+* **Bootloader:** Triggered via the top-right key.
+* **Mic Toggle:** A system-wide shortcut (`Win+Alt+K`) for meetings.
 
-**Left Hand - Modifiers & Boot:**
-- **Top row:** `Sticky Win`, `Sticky Alt`, `Sticky Ctrl`, `Sticky Shift`, `Bootloader`
-- **Home row:** `Win`, `Alt`, `Ctrl`, `Shift`, None
-- **Bottom row:** None, `Alt Gr`, `Brightness Up`, `Brightness Down`, None
-
-**Right Hand - Bluetooth & Media:**
-- **Top row:** `BT Clear`, None, None, None, None
-- **Home row:** None, `BT Device 0`, `BT Device 1`, `BT Device 2`, `BT Device 3`
-- **Bottom row:** `Win+Alt+K` (mic toggle), `Volume Up`, `Volume Down`, None, `BT Device 4`
-
-**Thumb Cluster:**
-- **Left:** None, `Space`, `Alt+Tab`
-- **Right:** `Play/Pause`, `Previous Track`, `Next Track`
-
-**Bootloader Access:** To enter bootloader mode for firmware flashing, activate this layer and press the top-right key. Both the layer trigger and boot button must be on the same keyboard split.
-
-**Bluetooth Profiles:** Five device profiles (0-4) allow quick switching between paired devices. Use BT Clear to remove the current profile's pairing.
-
-**Media Controls:** Standard playback controls on the right thumb cluster, plus system-wide microphone toggle (`Win+Alt+K`) that works across all apps regardless of focus.
+---
 
 ## Photos
-![photo01](photos/IMG_20250310_170347.jpg)
-![photo02](photos/IMG_20250310_170352.jpg)
-![photo03](photos/IMG_20250310_193301.jpg)
-![photo04](photos/IMG_20250310_193310.jpg)
-![photo05](photos/IMG_20250310_193332.jpg)
-![photo06](photos/IMG_20250310_193345.jpg)
-![photo07](photos/IMG_20250310_193424.jpg)
-![photo08](photos/IMG_20250310_193434.jpg)
-![photo09](photos/IMG_20250705_132208.jpg)
-![photo10](photos/MVIMG_20251216_092920.jpg)
-![photo11](photos/MVIMG_20251216_092944.jpg)
-![photo12](photos/IMG_20251211_090851.jpg)
+<p align="center">
+  <img src="photos/IMG_20251211_090851.jpg" width="100%" />
+</p>
+
+<details>
+<summary>📂 View Full Gallery</summary>
+
+| | |
+| :---: | :---: |
+| ![01](photos/IMG_20250310_170347.jpg) | ![02](photos/IMG_20250310_170352.jpg) |
+| ![03](photos/IMG_20250310_193301.jpg) | ![04](photos/IMG_20250310_193310.jpg) |
+| ![05](photos/IMG_20250310_193332.jpg) | ![06](photos/IMG_20250310_193345.jpg) |
+| ![07](photos/IMG_20250310_193424.jpg) | ![08](photos/IMG_20250310_193434.jpg) |
+| ![09](photos/IMG_20250705_132208.jpg) | ![10](photos/MVIMG_20251216_092920.jpg) |
+| ![11](photos/MVIMG_20251216_092944.jpg) | ![12](photos/IMG_20260214_111652.jpg)|
+
+</details>
