@@ -8,9 +8,9 @@ A high-performance **36-key split layout** for the [Temper keyboard](https://git
 
 ## 📑 Table of Contents
 1. [Base Layout & Philosophy](#base-layout--philosophy)
-2. [Thumb Clusters](#thumb-clusters)
-3. [Combos](#combos)
-4. [The Mouse Gear System](#the-mouse-gear-system)
+2. [Thumb Clusters & Sticky Logic](#thumb-clusters--sticky-logic)
+3. [The Gearbox (Mouse & Scroll)](#the-gearbox-mouse--scroll)
+4. [Combos & Shortcut Architecture](#combos--shortcut-architecture)
 5. [Layer Reference](#layer-reference)
 6. [Photos](#photos)
 
@@ -19,116 +19,123 @@ A high-performance **36-key split layout** for the [Temper keyboard](https://git
 ## Base Layout & Philosophy
 The foundation is **Colemak-DH**, modified for high-speed bilingual typing.
 
-* **Greek Optimization:** The bottom-row pinky key is mapped to `;`. In Greek software layouts, this provides the **accent (΄)** for vowels (ά, έ, ί, etc.). The `'` key has been moved to the top-row pinky.
-* **No Home-Row Mods (HRM):** This layout avoids HRM to eliminate the latency and accidental activations that occur during high-speed typing or rapid language switching.
-* **Sticky Keys:** Instead of holding modifiers, this layout heavily utilizes **Sticky Keys** on the thumbs for one-shot capitalization and modifier combinations.
+* **Greek Optimization**: The bottom-row pinky key is mapped to `;`. In Greek software layouts, this provides the **accent (΄)** for vowels (ά, έ, ί, ό, ή, ύ, ώ).
+* **Shifted Punctuation**: The `'` key has been moved to the top-row pinky to accommodate the Greek accent key.
+* **No Home-Row Mods (HRM)**: To eliminate the latency and "misfire" risks inherent in HRM, this layout relies on **Sticky Keys** and **Combos**. 
+* **Seamless Switching**: This architecture allows for raw typing speeds and seamless switching between Greek and English without accidental modifier activations.
 
 ---
 
-## Thumb Clusters
+## Thumb Clusters & Sticky Logic
 
-### On Tap (The "Basics")
-| Position | Left Hand | Right Hand |
+### The `sk_mo` Architecture
+The left outer thumb utilizes a sophisticated `sk_mo` (Sticky Key Momentary) behavior. This allows the thumb to act as a **One-Shot Shift** for quick capitalization on tap, while doubling as the **Numbers Layer** trigger on hold.
+
+```cpp
+sk_mo: sticky_key_momentary {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    bindings = <&mo>, <&sk>;
+};
+```
+### Thumb Mappings
+| Position | Left Hand (Tap/Hold) | Right Hand (Tap/Hold) |
 | :--- | :--- | :--- |
-| **Inner** (Tucked) | `Escape` | `Delete` |
-| **Neutral** (Home) | `Space` | `Backspace` |
-| **Outer** (Wide) | `Shift` (Sticky) | `Enter` |
-
-* **Neutral positions** are assigned to high-frequency keys (`Space`/`Backspace`).
-* **Inner positions** house "destructive" or less common keys (`Esc`/`Del`) to prevent accidental presses.
-
-### On Hold (The "Engine")
-This layout follows a modified **Miryoku** logic. While Miryoku typically places Numbers on the right and Mouse on the left, **this layout swaps them** to allow for a more natural right-handed "Numpad" feel.
-
-| Position | Left Hand Hold | Right Hand Hold |
-| :--- | :--- | :--- |
-| **Inner** | **Layer 6:** Bluetooth/Media | **Layer 5:** Function (F1-F12) |
-| **Neutral** | **Layer 1:** Navigation | **Layer 4:** Mouse |
-| **Outer** | **Layer 2:** Numbers (`sk_mo`) | **Layer 3:** Raise (Symbols) |
-
-> **Note on `sk_mo`:** The Left Outer thumb is a dual-purpose key. **Tap** for Sticky Shift, **Hold** for the Numbers layer.
+| **Inner** (Tucked) | `Escape` / **BT (6)** | `Delete` / **Fun (5)** |
+| **Neutral** (Home) | `Space` / **Nav (1)** | `Backspace` / **Mouse (4)** |
+| **Outer** (Wide) | `Sticky Shift` / **Num (2)** | `Enter` / **Raise (3)** |
 
 ---
 
-## Combos
+## ⚙️ The Gearbox: Dynamic Movement & Scrolling
+This layout utilizes ZMK's input listener system to create a "Manual Transmission" for your pointer. While holding the **Mouse Layer (4)** with your right thumb, use your left-hand triggers to scale sensitivity on the fly.
 
-### Two-Key Combos (Horizontal)
-* `W + F`: **Language Switch** (`Win + Space`)
-* `R + S`: **Caps Word** (Contextual - only in Nav)
-* `H + ,`: **Minus** (`-`)
-* `, + .`: **Control** (Acting as Decimal Point in Num Layer)
-* `L + N`: **Tab**
-* `X + C`: **Alt**
-* `C + D`: **Underscore** (`_`)
+| Gear | Trigger (Hold) | Scaling Ratio | Use Case |
+| :--- | :--- | :--- | :--- |
+| **1st** | **Nav (1)** | 🟢 **1:3 (33%)** | **High Precision**: Pixel-perfect UI design or fine scrolling. |
+| **2nd** | **Num (2)** | 🟡 **1:2 (50%)** | **Medium Precision**: General navigation and spreadsheet work. |
+| **3rd** | **Default (4)** | ⚪ **1:1 (100%)** | **Drive**: Standard desktop navigation. |
+| **4th** | **Raise (3)** | 🔴 **3:1 (300%)** | **Turbo**: Rapid travel across multi-monitor setups. |
 
-### Two-Key Combos (Vertical & Symbols)
-* **Braces `{ }`**: `W + R` (Left) / `U + N` (Right)
-* **Brackets `[ ]`**: `W + F` (Left) / `N + E` (Right)
-* **Parentheses `( )`**: `F + P` (Left) / `L + U` (Right)
-* **Misc**: `Q + W` (**\**), `W + F` (**[**), `E + I` (**/**), `W + F` (**|**), `U + Y` (**=**)
-* **System**: `Z + O` (**Caps Lock**)
+### Scaling Logic Example
+
+```cpp
+// Input listener scaling configuration
+&mmv_input_listener {
+    input-processors = <&zip_xy_scaler 1 3>; // Precision Gear
+};
+
+&msc_input_listener {
+    input-processors = <&zip_scroll_scaler 1 3>; // Precision Scroll
+};
+```
+---
+
+## 🔗 Combos & Shortcuts
+
+### Two-Key Combos
+* **Language/System:** `W + F` (Lang Switch), `R + S` (Caps Word), `Z + O` (Caps Lock).
+* **Symbols:** `W + R` / `U + N` (`{ }`), `F + P` / `L + U` (`( )`), `Q + W` (`\`), `C + D` (`_`).
+* **Modifiers:** `X + C` (**Alt**), `, + .` (**Control**).
 
 ### Layer Toggle Combos (3-Key)
-Used for single-handed operation over extended periods:
+For single-handed operation:
 * `Q + A`: **Toggle Mouse Layer**
 * `Y + O`: **Toggle Navigation Layer**
 * `V + K`: **Toggle Numbers Layer**
 
 ---
 
-## The Mouse Gear System
-Using ZMK's `mmv_input_listener`, this layout treats mouse sensitivity like a manual transmission. While in the **Mouse Layer (4)**, hold the following triggers to scale speed:
-
-| Active Layer | Scaling Ratio | Use Case |
-| :--- | :--- | :--- |
-| **Nav (1)** | **1:3 (33%)** | **Slow:** High-precision UI design or photo editing. |
-| **Num (2)** | **1:2 (50%)** | **Mid:** General navigation and spreadsheet work. |
-| **Mouse (4)** | **1:1 (100%)** | **Default:** Standard desktop navigation. |
-| **Raise (3)** | **3:1 (300%)** | **Fast:** Rapid travel across multi-monitor setups. |
-
----
-
-## Layer Reference
+## 📂 Layer Reference
 
 ### 1. Navigation Layer
-An inverted-T arrow cluster on the right hand. The left hand provides a "Clipboard Row": **Undo (Ctrl+Z), Cut (Ctrl+X), Copy (Ctrl+C), Paste (Ctrl+V), Redo (Ctrl+Y).**
+Right-hand inverted-T arrow cluster. Left hand "Clipboard Row": **Undo, Cut, Copy, Paste, Redo.**
 
-### 2. Numbers Layer
-A 10-key Numpad on the right hand. 
-* **Smart Arithmetic:** `+` and `-` keys are **Mod-Morphs**. Tapping produces Plus/Minus; Shifting produces Multiply/Divide.
-* **Shortcuts:** Includes `Alt+Tab` and `Alt+Shift+Tab` on the home row for window management.
+### 2. Numbers Layer (Smart Numpad)
+* **Smart Arithmetic:** Uses "Mod-Morphs"—Tap for `+`/`-`, Shift for `*`/`/`.
+* **Contextual Decimal:** The `, + .` combo becomes a **Decimal Point** (`.`) in this layer.
 
 ### 3. Raise (Symbols) Layer
-Shifted number row symbols (!@#$%) on the left hand. This layer also triggers the **Fast Mouse** gear.
+| Row | Left Hand | Right Hand |
+| :--- | :--- | :--- |
+| **Top** | `!` `@` `#` `$` `%` | `)` `(` `*` `&` `^` |
+| **Home** | `1` `2` `3` `4` `5` | `0` `9` `8` `7` `6` |
 
 ### 4. Mouse Layer
-Left hand provides movement and scrolling in an inverted-T pattern. Bottom row contains browser shortcuts: `Close Tab`, `Focus Address Bar`, `Refresh`, `New Tab`, and `Reopen Tab`.
+Left hand movement/scroll (T-pattern). Bottom row: **Close Tab, Address Bar, Refresh, New Tab.**
 
-### 5. Function Layer
-F1-F12 keys arranged in a numpad-style grid for easy memorization. Includes `Print Screen`, `Scroll Lock`, and `Task Manager`.
+---
+## 🔢 Smart Arithmetic & Combos
 
-### 6. Bluetooth & Media Layer
-Handles 5 Bluetooth profiles, `BT Clear`, and media playback.
-* **Bootloader:** Triggered via the top-right key.
-* **Mic Toggle:** A system-wide shortcut (`Win+Alt+K`) for meetings.
+### Numbers Layer (Smart Numpad)
+To maximize efficiency, the Numbers layer uses **Mod-Morphs** for math operators.
+* **Plus / Star**: Tapping produces `+`, Shifting produces `*`.
+* **Minus / Slash**: Tapping produces `-`, Shifting produces `/`.
+
+### Critical Combos
+Combos provide essential symbols without requiring full layer transitions.
+* **Language Switch**: `W + F` for rapid toggle between Greek/English.
+* **Braces `{ }`**: Vertical combos on `W + R` (Left) and `U + N` (Right).
+* **Contextual Decimal**: Within the **Num Layer**, the `, + .` combo produces a **Decimal Point** (`.`).
 
 ---
 
-## Photos
+## 📸 Photos
 <p align="center">
-  <img src="photos/IMG_20251211_090851.jpg" width="100%" />
+  <img src="photos/IMG_20260214_111652.jpg" width="48%" />
+  <img src="photos/MVIMG_20251216_092920.jpg" width="48%" />
 </p>
 
-<details>
-<summary>📂 View Full Gallery</summary>
+<details open>
+<summary>📂 Full Gallery</summary>
 
-| | |
-| :---: | :---: |
-| ![01](photos/IMG_20250310_170347.jpg) | ![02](photos/IMG_20250310_170352.jpg) |
-| ![03](photos/IMG_20250310_193301.jpg) | ![04](photos/IMG_20250310_193310.jpg) |
-| ![05](photos/IMG_20250310_193332.jpg) | ![06](photos/IMG_20250310_193345.jpg) |
-| ![07](photos/IMG_20250310_193424.jpg) | ![08](photos/IMG_20250310_193434.jpg) |
-| ![09](photos/IMG_20250705_132208.jpg) | ![10](photos/MVIMG_20251216_092920.jpg) |
-| ![11](photos/MVIMG_20251216_092944.jpg) | ![12](photos/IMG_20260214_111652.jpg)|
+| | | |
+|:---:|:---:|:---:|
+| ![01](photos/IMG_20250310_170347.jpg) | ![02](photos/IMG_20250310_170352.jpg) | ![03](photos/IMG_20250310_193301.jpg) |
+| ![04](photos/IMG_20250310_193310.jpg) | ![05](photos/IMG_20250310_193332.jpg) | ![06](photos/IMG_20250310_193345.jpg) |
+| ![07](photos/IMG_20250310_193424.jpg) | ![08](photos/IMG_20250310_193434.jpg) | ![09](photos/MVIMG_20251216_092944.jpg) |
+| ![10](photos/MVIMG_20251216_092920.jpg) | ![11](photos/IMG_20250705_132208.jpg) | ![12](photos/IMG_20260214_111652.jpg) |
 
 </details>
