@@ -2,7 +2,7 @@
 
 ![Diagram of config](keymap-drawer/temper.svg)
 
-A high-performance **36-key split layout** for the [Temper keyboard](https://github.com/clyteduo/temper). This configuration merges **Colemak-DH** efficiency with specialized **Greek-bilingual** support and a unique "Manual Gearbox" system for mouse control.
+A high-performance **36-key split layout** for the [Temper keyboard](https://github.com/raeedcho/temper). This configuration merges **Colemak-DH** efficiency with specialized **Greek-bilingual** support and a unique "Manual Gearbox" system for mouse control.
 
 ---
 
