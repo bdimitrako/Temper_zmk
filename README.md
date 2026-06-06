@@ -12,7 +12,8 @@ A high-performance **36-key split layout** for the [Temper keyboard](https://git
 3. [The Gearbox (Mouse & Scroll)](#the-gearbox-mouse--scroll)
 4. [Combos & Shortcut Architecture](#combos--shortcut-architecture)
 5. [Layer Reference](#layer-reference)
-6. [Photos](#photos)
+6. [Gaming Layer](#gaming-layer)
+7. [Photos](#photos)
 
 ---
 
@@ -115,6 +116,12 @@ Right-hand inverted-T arrow cluster. Left hand "Clipboard Row": **Undo, Cut, Cop
 
 ### 4. Mouse Layer
 Left hand movement/scroll (T-pattern). Bottom row: **Close Tab, Address Bar, Refresh, New Tab.**
+
+---
+
+## 🎮 Gaming Layer
+
+The latest addition is a dedicated **GAME layer (layer 7)** for gaming sessions. QWERTY is shifted one column to the right, placing `P`, `1`, and `2` on the left-pinky column — keeping frequently used gaming keys (`WASD`, `1`, `2`) naturally under the fingers. The thumb row is remapped to `ESC / SPACE / LSHIFT` on the left and `RET / BSPC / FSLH` on the right. Toggle in with the `L + U + Y` 3-key combo on Base; exit with the inner thumb pair `LSFT + RET`.
 
 ---
 ## 🔢 Smart Arithmetic & Combos
