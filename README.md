@@ -9,11 +9,11 @@ A high-performance **36-key split layout** for the [Temper keyboard](https://git
 ## 📑 Table of Contents
 1. [Base Layout & Philosophy](#base-layout--philosophy)
 2. [Thumb Clusters & Sticky Logic](#thumb-clusters--sticky-logic)
-3. [The Gearbox (Mouse & Scroll)](#the-gearbox-dynamic-movement--scrolling)
-4. [Combos & Shortcut Architecture](#combos--shortcuts)
-5. [Layer Reference](#layer-reference)
-6. [Gaming Layer](#gaming-layer)
-7. [Photos](#photos)
+3. [The Gearbox (Mouse & Scroll)](#-the-gearbox-dynamic-movement--scrolling)
+4. [Combos & Shortcut Architecture](#-combos--shortcuts)
+5. [Layer Reference](#-layer-reference)
+6. [Gaming Layer](#-gaming-layer)
+7. [Photos](#-photos)
 
 ---
 
